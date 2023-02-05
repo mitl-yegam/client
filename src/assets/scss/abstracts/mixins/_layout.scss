@@ -27,14 +27,14 @@
   @if $axis == '' {
     @for $i from 0 through $max-gutters {
       &.g-#{$i} {
-        --gutter-x: calc(#{$i} * 1.5rem) !important;
-        --gutter-y: calc(#{$i} * 1.5rem) !important;
+        --gutter-x: calc(#{$i} * 1rem) !important;
+        --gutter-y: calc(#{$i} * 1rem) !important;
       }
     }
   } @else {
     @for $i from 0 through 5 {
         &.g#{$axis}-#{$i} {
-          --gutter-#{$axis}: calc(#{$i} * 1.5rem) !important;
+          --gutter-#{$axis}: calc(#{$i} * 1rem) !important;
         }
       }
   }
