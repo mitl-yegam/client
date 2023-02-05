@@ -13,8 +13,8 @@ import clsx from "clsx";
 const Enterprise = () => {
   return (
     <>
-    <section className="container">
-      <div className={clsx(styles['tab'], 'py-0 py-md-5')}>
+    <section className="container py-7">
+      <div className={clsx(styles['tab'])}>
         <Link to="/subscription-enterprise">
           <span className="normal2 blue-100 text-bolder">기업용 인터넷 가입</span>
         </Link>
