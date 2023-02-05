@@ -140,4 +140,7 @@ a {
   &:hover, &:active {
     text-decoration: none;
   }
+  &:visited {
+    color: inherit;
+  }
 }
