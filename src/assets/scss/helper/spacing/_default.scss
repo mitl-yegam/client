@@ -1,0 +1,63 @@
+@use '../../abstracts/variables/spacing';
+
+@for $i from 0 through spacing.$spacing {
+  .m-#{$i} {
+    margin: spacing.$base-size * $i;
+  }
+
+  .mt-#{$i} {
+    margin-top: spacing.$base-size * $i;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: spacing.$base-size * $i;
+  }
+
+  .ml-#{$i} {
+    margin-left: spacing.$base-size * $i;
+  }
+
+  .mr-#{$i} {
+    margin-right: spacing.$base-size * $i;
+  }
+
+  .mx-#{$i} {
+    margin-left: spacing.$base-size * $i;
+    margin-right: spacing.$base-size * $i;
+  }
+
+  .my-#{$i} {
+    margin-top: spacing.$base-size * $i;
+    margin-bottom: spacing.$base-size * $i;
+  }
+
+  .p-#{$i} {
+    padding: spacing.$base-size * $i;
+  }
+
+  .pt-#{$i} {
+    padding-top: spacing.$base-size * $i;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: spacing.$base-size * $i;
+  }
+
+  .pl-#{$i} {
+    padding-left: spacing.$base-size * $i;
+  }
+
+  .pr-#{$i} {
+    padding-right: spacing.$base-size * $i;
+  }
+
+  .px-#{$i} {
+    padding-left: spacing.$base-size * $i;
+    padding-right: spacing.$base-size * $i;
+  }
+
+  .py-#{$i} {
+    padding-top: spacing.$base-size * $i;
+    padding-bottom: spacing.$base-size * $i;
+  }
+}

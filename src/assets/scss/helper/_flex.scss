@@ -1,0 +1,65 @@
+@use "../abstracts/variables/flex" as *;
+@use "../abstracts/variables/spacing";
+
+.flex {
+  @each $name, $value in $flex-direction-map {
+    &-#{$name} {
+      flex-direction: $value;
+    }
+  }
+  @each $name, $value in $flex-grow-map {
+    &-#{$name} {
+      flex-grow: $value;
+    }
+  }
+  @each $name, $value in $flex-shrink-map {
+    &-#{$name} {
+      flex-shrink: $value;
+    }
+  }
+  @each $name, $value in $flex-wrap-map {
+    &-#{$name} {
+      flex-wrap: $value;
+    }
+  }
+  @each $name, $value in $justify-content-map{
+    &-#{$name} {
+      justify-content: $value;
+    }
+  }
+  @each $name, $value in $justify-items-map {
+    &-#{$name} {
+      justify-items: $value;
+    }
+  }
+  @each $name, $value in $justify-self-map {
+    &-#{$name} {
+      justify-self: $value;
+    }
+  }
+}
+
+.align {
+  @each $name, $value in $align-items-map {
+    &-items-#{$name} {
+      align-items: $value;
+    }
+    &-self-#{$name} {
+      align-self: $value;
+    }
+  }
+
+  @each $name,$value in $align-content-map {
+    &-content-#{$name} {
+      align-content: $value;
+    }
+  }
+}
+
+.gap {
+  @for $i from 0 through $max-gap {
+    &-#{$i} {
+      gap: spacing.$base-size * $i;
+    }
+  }
+}

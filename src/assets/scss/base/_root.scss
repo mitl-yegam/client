@@ -1,0 +1,11 @@
+@use "../abstracts/variables/colors";
+
+:root {
+  --gutter-x: 0;
+  --gutter-y: 16px;
+}
+
+body {
+  color: map-get(colors.$color-map, gray-600);
+  font-family: NotoSansKR, sans-serif;
+}
