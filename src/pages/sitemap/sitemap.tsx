@@ -98,6 +98,18 @@ const SiteMap = () => {
           <p>.gray-700 .bg-gray-700</p>
         </li>
         <li>
+          <div className={clsx(styles['color-chip'], "bg-gray-800")}></div>
+          <p>.gray-800 .bg-gray-800</p>
+        </li>
+        <li>
+          <div className={clsx(styles['color-chip'], "bg-gray-900")}></div>
+          <p>.gray-900 .bg-gray-900</p>
+        </li>
+        <li>
+          <div className={clsx(styles['color-chip'], "bg-gray-1000")}></div>
+          <p>.gray-1000 .bg-gray-1000</p>
+        </li>
+        <li>
           <div className={clsx(styles['color-chip'], "bg-black")}></div>
           <p>.black .bg-black</p>
         </li>

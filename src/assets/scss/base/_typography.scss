@@ -1,24 +1,45 @@
 @use '../abstracts/mixins/typography';
+@use '../abstracts/mixins/breakpoints';
 
 h1, .heading1 {
-  @include typography.make-typography(700, 40px);
+  @include typography.make-typography(700, 30px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 40px);
+  }
 }
 h2,
 .heading2 {
-  @include typography.make-typography(700, 36px);
+  @include typography.make-typography(700, 27px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 36px);
+  }
 }
 h3,
 .heading3 {
-  @include typography.make-typography(700, 28px);
+  @include typography.make-typography(700, 23px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 28px);
+  }
 }
 h4,
 .heading4 {
-  @include typography.make-typography(700, 24px);
+  @include typography.make-typography(700, 20px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 24px);
+  }
 }
 
 h5,
 .heading5 {
-  @include typography.make-typography(700, 20px);
+  @include typography.make-typography(700, 19px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(700, 20px);
+  }
 }
 
 h6,
@@ -29,31 +50,67 @@ h6,
 
 
 .bold1 {
-  @include typography.make-typography(500, 40px);
+  @include typography.make-typography(500, 35px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 40px);
+  }
 }
 .bold2 {
-  @include typography.make-typography(500, 36px);
+  @include typography.make-typography(500, 31px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 36px);
+  }
 }
 .bold3 {
-  @include typography.make-typography(500, 28px);
+  @include typography.make-typography(500, 24px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 28px);
+  }
 }
 .bold4 {
-  @include typography.make-typography(500, 24px);
+  @include typography.make-typography(500, 20px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 24px);
+  }
 }
 .bold5 {
-  @include typography.make-typography(500, 18px);
+  @include typography.make-typography(500, 16px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(500, 18px);
+  }
 }
 
 
 .normal1 {
-  @include typography.make-typography(400, 36px);
+  @include typography.make-typography(400, 30px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(400, 36px);
+  }
 }
 .normal2 {
-  @include typography.make-typography(400, 28px);
+  @include typography.make-typography(400, 20px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(400, 28px);
+  }
 }
 .normal3 {
-  @include typography.make-typography(400, 24px);
+  @include typography.make-typography(400, 18px);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(400, 24px);
+  }
 }
 p, .normal4 {
-  @include typography.make-typography(400, 18px);
+  @include typography.make-typography(400, 16px);
+  
+  @include breakpoints.media-breakpoint-up(md) {
+    @include typography.make-typography(400, 18px);
+  }
 }
