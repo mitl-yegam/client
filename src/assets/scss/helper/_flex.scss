@@ -22,21 +22,29 @@
       flex-wrap: $value;
     }
   }
-  @each $name, $value in $justify-content-map{
-    &-#{$name} {
-      justify-content: $value;
+}
+
+.justify {
+  @each $name,
+    $value in $justify-content-map {
+      &-#{$name} {
+        justify-content: $value;
+      }
     }
-  }
-  @each $name, $value in $justify-items-map {
-    &-#{$name} {
-      justify-items: $value;
+  
+    @each $name,
+    $value in $justify-items-map {
+      &-#{$name} {
+        justify-items: $value;
+      }
     }
-  }
-  @each $name, $value in $justify-self-map {
-    &-#{$name} {
-      justify-self: $value;
+  
+    @each $name,
+    $value in $justify-self-map {
+      &-#{$name} {
+        justify-self: $value;
+      }
     }
-  }
 }
 
 .align {
