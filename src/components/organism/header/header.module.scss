@@ -1,0 +1,23 @@
+@use '../../../assets/scss/abstracts/variables/colors';
+
+.root {
+  border-bottom: 1px solid map-get(colors.$color-map, gray-400);
+}
+.ul-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-grow: 1;
+
+  & a {
+    padding: 8px;
+  }
+  & li>a:hover {
+    color: map-get(colors.$color-map, blue-100);
+  }
+}
+
+.nav-wrapper {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}

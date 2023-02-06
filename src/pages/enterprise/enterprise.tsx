@@ -14,8 +14,10 @@ const Enterprise = () => {
   return (
     <>
     <section className="container">
-      <div className={clsx(styles['tab'], 'py-0 py-md-5')}>
-        <span className="normal2 blue-100 text-bolder">기업용 인터넷 가입</span>
+      <div className={clsx(styles['tab'])}>
+        <Link to="/subscription-enterprise">
+          <span className="normal2 blue-100 text-bolder">기업용 인터넷 가입</span>
+        </Link>
         <div className="normal2 gray-300 mx-3 mx-md-6">|</div>
         <Link to="/subscription-security">
           <span className="normal2">전용회선</span>

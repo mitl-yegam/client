@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { path } from "./data";
+import { path } from "../../components/organism/layout/data";
 import styles from './sitemap.module.scss';
 import clsx from "clsx";
 
