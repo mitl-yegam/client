@@ -3,7 +3,6 @@
 
 .tab {
     display: flex;
-    padding: 28px 0;
 
     &.border-blue {
         border-bottom: 1px solid map-get(colors.$color-map, blue-100);
