@@ -1,0 +1,23 @@
+@use "../../assets/scss/abstracts/mixins/breakpoints";
+
+.dot-position {
+    position:relative;
+}
+
+.dot {
+    position: absolute;
+    top: -36px;
+    left: 12px;
+
+    @include breakpoints.media-breakpoint-up(md) {
+        top: -45px;
+        left: 14px;
+    }
+}
+
+.card-wrapper {
+    background-color: white;
+    padding: 68px 37px;
+    border-radius: 8px;
+    height: 100%;
+}

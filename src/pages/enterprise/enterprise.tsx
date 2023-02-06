@@ -13,7 +13,7 @@ import clsx from "clsx";
 const Enterprise = () => {
   return (
     <>
-    <section className="container py-7">
+    <section className="container">
       <div className={clsx(styles['tab'])}>
         <Link to="/subscription-enterprise">
           <span className="normal2 blue-100 text-bolder">기업용 인터넷 가입</span>
@@ -28,7 +28,7 @@ const Enterprise = () => {
       <div className="container white text-center">
         <h1 className="mb-5 mb-md-11">기업용 인터넷 가입</h1>
         <p className="mb-5 normal1">
-        기업 인터넷과 전화를 <br className="d-md-none"/>안정적이면서 저렴하게<br className="d-none d-md-block"/> 고객의 <br className="d-md-none"/>환경에 맞춤으로 권해드립니다.
+        기업 인터넷과 전화를 <br className="d-md-none"/>안정적이면서 저렴하게<br className="d-none d-md-block"/> 고객의 <br className="d-none d-md-none"/>환경에 맞춤으로 권해드립니다.
         </p>
         <p className="normal2">KT · SK· LG 3사 모두 가능</p>
       </div>
