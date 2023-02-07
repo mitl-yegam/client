@@ -14,8 +14,8 @@ const Security = () => {
 
   return (
     <>
-    <section className="container">
-      <div className={clsx(enterpriseStyles['tab'])}>
+    <section className="container py-0">
+      <div className={clsx(enterpriseStyles['tab'], 'py-5 py-md-7')}>
         <Link to="/subscription-enterprise">
           <span className="normal2">기업용 인터넷 가입</span>
         </Link>
