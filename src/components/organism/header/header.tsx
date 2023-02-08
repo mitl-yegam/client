@@ -10,6 +10,9 @@ const Header = () => {
   const [toggle, setToggle] = useState<boolean>();
   const handleOnClick = () => setToggle(!toggle);
   const handleNavItem = () => {
+    if (window.innerWidth > 768) {
+      return;
+    }
     handleOnClick();
     window.scrollTo({ behavior: 'smooth', top: 0 });
   };
