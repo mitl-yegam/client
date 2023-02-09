@@ -8,6 +8,7 @@ import Certification3 from "../../assets/images/etc/certification-3.png";
 import Certification4 from "../../assets/images/etc/certification-4.png";
 import Certification5 from "../../assets/images/etc/certification-5.png";
 import LogoExample from "../../assets/images/logo/logo-example.png";
+import NewExample from "../../assets/images/etc/news-example.png";
 
 const Company = () => {
 
@@ -58,7 +59,38 @@ const Company = () => {
                     <h2 className="blue-100 mt-3 mb-12">따뜻한 나눔</h2>
                     <p className="bold3 text-center">예감과 함께 하신다면, <br/>사랑이 필요한 이웃에게 따뜻한 손을 내밀어 주시고 계신 것입니다.</p>
                 </div>
+                <div className="container mt-12">
+                    <div className="row">
+                        <div className="col col-md-6 col-lg-4 d-center flex-column">
+                            <div>
+                                <img src={NewExample} alt="" />
 
+                                <p className="mt-5 bold3">2022년 여름창립기념</p>
+                                <p className="">
+                                    필리핀 바탕가스 라파지역 <br/>빈민촌 아이들 식사후원
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col col-md-6 col-lg-4 d-center flex-column">
+                            <div>
+                                <img src={NewExample} alt="" />
+                                <p className="mt-5 bold3">2022년 여름창립기념</p>
+                                <p className="">
+                                    필리핀 바탕가스 라파지역 <br/>빈민촌 아이들 식사후원
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col col-md-6 col-lg-4 d-center flex-column">
+                            <div>
+                                <img src={NewExample} alt="" />
+                                <p className="mt-5 bold3">2022년 여름창립기념</p>
+                                <p className="">
+                                    필리핀 바탕가스 라파지역 <br/>빈민촌 아이들 식사후원
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </section>
         </>
