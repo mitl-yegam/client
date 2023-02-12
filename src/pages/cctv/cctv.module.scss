@@ -1,0 +1,18 @@
+
+.bubble-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .bubble {
+        width: 300px;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: -38px;
+        background-image: url('../../assets/images/etc/bubble-left.png');
+    }
+}
+
