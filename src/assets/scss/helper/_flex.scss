@@ -6,22 +6,22 @@
 .flex {
   @each $name, $value in $flex-direction-map {
     &-#{$name} {
-      flex-direction: $value;
+      flex-direction: $value !important;
     }
   }
   @each $name, $value in $flex-grow-map {
     &-#{$name} {
-      flex-grow: $value;
+      flex-grow: $value !important;
     }
   }
   @each $name, $value in $flex-shrink-map {
     &-#{$name} {
-      flex-shrink: $value;
+      flex-shrink: $value !important;
     }
   }
   @each $name, $value in $flex-wrap-map {
     &-#{$name} {
-      flex-wrap: $value;
+      flex-wrap: $value !important;
     }
   }
 
@@ -62,21 +62,21 @@
   @each $name,
     $value in $justify-content-map {
       &-#{$name} {
-        justify-content: $value;
+        justify-content: $value !important;
       }
     }
   
     @each $name,
     $value in $justify-items-map {
       &-#{$name} {
-        justify-items: $value;
+        justify-items: $value !important;
       }
     }
   
     @each $name,
     $value in $justify-self-map {
       &-#{$name} {
-        justify-self: $value;
+        justify-self: $value !important;
       }
     }
 }
@@ -84,16 +84,16 @@
 .align {
   @each $name, $value in $align-items-map {
     &-items-#{$name} {
-      align-items: $value;
+      align-items: $value !important;
     }
     &-self-#{$name} {
-      align-self: $value;
+      align-self: $value !important;
     }
   }
 
   @each $name,$value in $align-content-map {
     &-content-#{$name} {
-      align-content: $value;
+      align-content: $value !important;
     }
   }
 }
