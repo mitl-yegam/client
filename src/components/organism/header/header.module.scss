@@ -4,7 +4,7 @@
 @use '../../../assets/scss/abstracts/mixins/breakpoints' as breakpointsMixin;
 
 .root {
-  background-color: map-get(colors.$color-map, white);
+  background-color: map-get(colors.$color-map, 'white');
   border-bottom: 1px solid map-get(colors.$color-map, gray-100);
   position: sticky;
   top: 0;
