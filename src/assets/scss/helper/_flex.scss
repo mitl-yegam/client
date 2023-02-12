@@ -30,28 +30,28 @@
       @each $name,
         $value in $flex-direction-map {
           &-#{$breakpoint}-#{$name} {
-            flex-direction: $value;
+            flex-direction: $value !important;
           }
         }
       
         @each $name,
         $value in $flex-grow-map {
           &-#{$breakpoint}-#{$name} {
-            flex-grow: $value;
+            flex-grow: $value !important;
           }
         }
       
         @each $name,
         $value in $flex-shrink-map {
           &-#{$breakpoint}-#{$name} {
-            flex-shrink: $value;
+            flex-shrink: $value !important;
           }
         }
       
         @each $name,
         $value in $flex-wrap-map {
           &-#{$breakpoint}-#{$name} {
-            flex-wrap: $value;
+            flex-wrap: $value !important;
           }
         }      
     }

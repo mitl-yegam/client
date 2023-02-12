@@ -106,7 +106,7 @@ const Company = () => {
                         </div>
                         <div className="col col-md-6 col-lg-4 d-center flex-column">
                             <div>
-                                <img src={NewExample} alt="" />
+                                <img src={NewExample} width="100%" alt="" />
                                 <p className="mt-5 bold3">2022년 여름창립기념</p>
                                 <p className="">
                                     필리핀 바탕가스 라파지역 <br/>빈민촌 아이들 식사후원
