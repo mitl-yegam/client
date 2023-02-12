@@ -1,0 +1,9 @@
+@use '../../../assets/scss/abstracts/variables/colors';
+
+.root {
+  background: rgba($color: map-get(colors.$color-map, 'black'), $alpha: 0.7);
+  border-radius: 100px;
+  width: 100%;
+  height: 96px;
+  max-width: 456px;
+}
