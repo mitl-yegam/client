@@ -131,16 +131,18 @@
   }
 
   @include breakpointsMixin.media-breakpoint-up(md) {
-    & {
-      width: auto;
-      height: auto;
-      gap: 0;
-      flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 0;
+    flex-direction: row;
 
-      & li {
-        width: auto;
-        border-top: unset;
-      }
+    & li {
+      width: auto;
+      border-top: unset;
+    }
+
+    &.active {
+      height: 100%;
     }
   }
 }
