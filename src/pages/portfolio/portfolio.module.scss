@@ -1,0 +1,21 @@
+@use '../../assets/scss/abstracts/variables/colors';
+@use '../../assets/scss/helper/layout';
+@use '../../assets/scss/abstracts/mixins/breakpoints' as breakpointsMixin;
+
+.root {
+  & .case-wrapper {
+    gap: 20px;
+
+    li {
+      width: 100%;
+      max-width: 411px;
+      & img {
+        width: 100%;
+      }
+    }
+
+    @include breakpointsMixin.media-breakpoint-up(md) {
+      justify-content: flex-start;
+    }
+  }
+}
