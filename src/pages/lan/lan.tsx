@@ -5,6 +5,11 @@ import LanExample1 from "../../assets/images/etc/lan-example-1.png";
 import LanExample2 from "../../assets/images/etc/lan-example-2.png";
 import LanExample3 from "../../assets/images/etc/lan-example-3.png";
 import LanExample4 from "../../assets/images/etc/lan-example-4.png";
+import IconQuestionAnswer from "../../assets/images/icon/icon-question-answer.svg";
+import IconSignUpCalendar from "../../assets/images/icon/icon-sign-up-calendar.svg";
+import IconCompany from "../../assets/images/icon/icon-company.svg";
+import IconRingingPhone from "../../assets/images/icon/icon-ringing-phone.svg";
+import IconTools from "../../assets/images/icon/icon-tools.svg";
 
 const Lan = () => {
 
@@ -60,7 +65,15 @@ const Lan = () => {
         </div>
       </section>
       <section className="container">
-
+        <div className="col">
+          <div>
+            <img src={IconQuestionAnswer}/>
+            <p></p>
+          </div>
+          <div>
+            <img src="" alt="" />
+          </div>
+        </div>
       </section>
       </>
   )
