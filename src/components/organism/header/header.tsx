@@ -24,14 +24,12 @@ const Header = () => {
           styles['nav-wrapper'],
           'container',
           'py-lg-4',
-          'px-0',
           'py-0',
-          'px-md-4',
           'py-md-4',
         )}>
         <nav className='row align-items-center justify-between gy-0 flex-column flex-md-row'>
           <Link className={styles['logo-link']} to={'/'}>
-            <img className='ml-10 mr-10' src={Logo} alt='yegam' />
+            <img className='mr-25' src={Logo} alt='yegam' />
           </Link>
           <div className={clsx(styles['hamburger-menu-wrapper'], 'd-md-none')}>
             <input type='checkbox' onClick={handleOnClick} checked={toggle} />
