@@ -160,7 +160,7 @@ const Main = () => {
         <div className='row d-center mb-15'>
           <h2 className='blue-100'>왜 예감의 고객만족도는 최상위인가요?</h2>
         </div>
-        <ul className={clsx(styles['best-reason-wrapper'], 'row')}>
+        <ul className={clsx(styles['best-reason-wrapper'], 'row', 'gy-5')}>
           <li
             className={clsx(styles[''], 'col col-md-4')}
             style={{ backgroundImage: `url(${bestReason1})` }}>
@@ -219,23 +219,25 @@ const Main = () => {
             </div>
           </li>
         </ul>
-        <div className='row d-flex align-items-center justify-between mb-25'>
-          <h2 className='blue-100'>설치사례</h2>
-          <Link to={'/portfolio'}>
-            <h5 className='blue-100'>더보기</h5>
-          </Link>
+        <div className='row  mb-25'>
+          <div className='col d-flex align-items-center justify-between'>
+            <h2 className='blue-100'>설치사례</h2>
+            <Link to={'/portfolio'}>
+              <h5 className='blue-100'>더보기</h5>
+            </Link>
+          </div>
           <div className='col'>
-            <ul className={clsx(styles['case-wrapper'], 'row')}>
-              <li>
+            <ul className={clsx(styles['case-wrapper'], 'row', 'gx-1')}>
+              <li className='col-6 col-md-3'>
                 <img src={mainCase1} alt='설치사례' />
               </li>
-              <li>
+              <li className='col-6 col-md-3'>
                 <img src={mainCase2} alt='설치사례' />
               </li>
-              <li>
+              <li className='col-6 col-md-3'>
                 <img src={mainCase3} alt='설치사례' />
               </li>
-              <li>
+              <li className='col-6 col-md-3'>
                 <img src={mainCase4} alt='설치사례' />
               </li>
             </ul>
