@@ -1,0 +1,66 @@
+@use '../../assets/scss/abstracts/variables/colors';
+@use '../../assets/scss/helper/layout';
+@use '../../assets/scss/abstracts/mixins/breakpoints' as breakpointsMixin;
+
+.root {
+  .table {
+    tr {
+      th {
+        background: rgba(
+          $color: map-get(colors.$color-map, blue-100),
+          $alpha: 0.1
+        );
+        color: map-get(colors.$color-map, blue-100);
+        font-weight: 700;
+        font-size: 18px;
+        padding: 15px 24px;
+        width: 163px;
+        text-align: start;
+        vertical-align: top;
+      }
+
+      td {
+        padding: 15px 24px;
+        input {
+          padding: 7px 21px;
+          width: 100%;
+          max-width: 447px;
+          border: 1px solid map-get(colors.$color-map, gray-150);
+          border-radius: 2px;
+        }
+        input::placeholder {
+          color: map-get(colors.$color-map, gray-400);
+        }
+
+        textarea {
+          width: -webkit-fill-available;
+          height: 430px;
+          border: 1px solid map-get(colors.$color-map, gray-150);
+          border-radius: 2px;
+          padding: 7px 21px;
+          resize: none;
+        }
+
+        .filebox {
+          .upload-name {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            padding: 0 10px;
+            vertical-align: middle;
+            color: #999999;
+          }
+
+          // input[type='file'] {
+          //   position: absolute;
+          //   width: 0;
+          //   height: 0;
+          //   padding: 0;
+          //   overflow: hidden;
+          //   border: 0;
+          // }
+        }
+      }
+    }
+  }
+}
