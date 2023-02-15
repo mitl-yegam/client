@@ -1,7 +1,7 @@
-@use "../abstracts/mixins/layout" as LayoutMixin;
-@use "../abstracts/mixins/breakpoints" as breakpointsMixin;
-@use "../abstracts/variables/breakpoints" as *;
-@use "../abstracts/variables/layout";
+@use '../abstracts/mixins/layout' as LayoutMixin;
+@use '../abstracts/mixins/breakpoints' as breakpointsMixin;
+@use '../abstracts/variables/breakpoints' as *;
+@use '../abstracts/variables/layout';
 
 .container {
   @include LayoutMixin.make-container(xss);
@@ -21,8 +21,8 @@
   .row {
     display: flex !important;
     flex-wrap: wrap !important;
-    margin-right: calc(-.5 * var(--gutter-x));
-    margin-left: calc(-.5 * var(--gutter-x));
+    margin-right: calc(-1 * var(--gutter-x));
+    margin-left: calc(-1 * var(--gutter-x));
 
     & > * {
       padding: var(--gutter-y) var(--gutter-x) !important;
