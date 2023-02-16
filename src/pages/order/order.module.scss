@@ -42,23 +42,77 @@
         }
 
         .filebox {
-          .upload-name {
-            display: inline-block;
+          .upload-file {
+            display: flex;
+            align-items: center;
             width: 100%;
             height: 40px;
             padding: 0 10px;
             vertical-align: middle;
             color: #999999;
+            border: 1px solid map-get(colors.$color-map, gray-150);
+            border-radius: 2px;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            img {
+              margin-right: 8.75px;
+            }
           }
 
-          // input[type='file'] {
-          //   position: absolute;
-          //   width: 0;
-          //   height: 0;
-          //   padding: 0;
-          //   overflow: hidden;
-          //   border: 0;
-          // }
+          input[type='file'] {
+            position: absolute;
+            width: 0;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
+          }
+
+          .file-name-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: map-get(colors.$color-map, gray-100);
+            color: map-get(colors.$color-map, blue-100);
+            border-radius: 2px;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+
+            .file-name {
+              font-weight: bold;
+            }
+            .remove-file {
+              color: map-get(colors.$color-map, gray-700);
+              cursor: pointer;
+              padding: 5px;
+            }
+            .remove-file:hover {
+              color: map-get(colors.$color-map, gray-400);
+            }
+          }
+        }
+
+        .terms {
+          background: #fdfcfc;
+          color: map-get(colors.$color-map, gray-400);
+          border: 1px solid map-get(colors.$color-map, gray-150);
+          border-radius: 2px;
+          padding: 7px 21px;
+          line-height: 26px;
+
+          .title {
+            font-weight: 500;
+            font-size: 18px;
+            color: map-get(colors.$color-map, gray-500);
+          }
+
+          p {
+            margin-bottom: 20px;
+          }
+          p:nth-child(4) {
+            margin-bottom: unset;
+          }
         }
       }
     }

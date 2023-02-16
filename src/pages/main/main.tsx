@@ -151,7 +151,12 @@ const Main = () => {
                   />
                 </label>
                 <div className='d-center'>
-                  <Button text={'상담신청'} />
+                  <Button
+                    text={'상담신청'}
+                    onClick={function (): void {
+                      throw new Error('Function not implemented.');
+                    }}
+                  />
                 </div>
               </form>
             </div>
