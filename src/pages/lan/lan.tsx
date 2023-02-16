@@ -67,92 +67,92 @@ const Lan = () => {
         </div>
       </section>
       <section className="container pt-12 pb-22">
-      <div className="row gx-1 justify-between">
-        <div className={styles['process-wrapper']}>
-          <div className={styles['process']}>
-            <div className={styles['round-wrapper']}>
-              <img src={IconQuestionAnswer}/>
+        <div className="row gx-1 justify-between">
+          <div className={styles['process-wrapper']}>
+            <div className={styles['process']}>
+              <div className={styles['round-wrapper']}>
+                <img src={IconQuestionAnswer}/>
+              </div>
+              <p className="heading6 blue-100 text-center mb-1">상담문의</p>
+              <ul className="normal4 gray-600">
+                <li>
+                · 견적게시판
+                </li>
+                <li>
+                · 전화 문의
+                </li>
+              </ul>
             </div>
-            <p className="heading6 blue-100 text-center mb-1">상담문의</p>
-            <ul className="normal4 gray-600">
-              <li>
-              · 견적게시판
-              </li>
-              <li>
-              · 전화 문의
-              </li>
-            </ul>
+          </div>
+          <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
+            <img src={IconArrowRight} alt="" />
+          </div>
+          <div className={styles['process-wrapper']}>
+            <div className={styles['process']}>
+              <div className={styles['round-wrapper']}>
+                <img src={IconSignUpCalendar}/>
+              </div>
+              <p className="heading6 blue-100 text-center mb-1">일정조율</p>
+              <ul className="normal4 gray-600">
+                <li>
+                · 방문 일정 
+                </li>
+                <li>
+                · 공사 일정
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
+            <img src={IconArrowRight} alt="" />
+          </div>
+          <div className={styles['process-wrapper']}>
+            <div className={styles['process']}>
+              <div className={styles['round-wrapper']}>
+                <img src={IconCompany}/>
+              </div>
+              <p className="heading6 blue-100 text-center mb-1">방문</p>
+              <ul className="normal4 gray-600">
+                <li>
+                · 공사현장 방문
+                </li>
+                <li>
+                · 견적 및 일정확인
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
+            <img src={IconArrowRight} alt="" />
+          </div>
+          <div className={styles['process-wrapper']}>
+            <div className={styles['process']}>
+              <div className={styles['round-wrapper']}>
+                <img src={IconTools}/>
+              </div>
+              <p className="heading6 blue-100 text-center mb-1">공사</p>
+              <ul className="normal4 gray-600">
+                <li>
+                · 신속 정확한 공사
+                </li>
+                <li>
+                · 네트워크 구축
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
+            <img src={IconArrowRight} alt="" />
+          </div>
+          <div className={styles['process-wrapper']}>
+            <div className={styles['process']}>
+              <div className={styles['round-wrapper']}>
+                <img src={IconRingingPhone}/>
+              </div>
+              <p className="heading6 blue-100 text-center mb-1">해피콜</p>
+            </div>
           </div>
         </div>
-        <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
-          <img src={IconArrowRight} alt="" />
-        </div>
-        <div className={styles['process-wrapper']}>
-          <div className={styles['process']}>
-            <div className={styles['round-wrapper']}>
-              <img src={IconSignUpCalendar}/>
-            </div>
-            <p className="heading6 blue-100 text-center mb-1">일정조율</p>
-            <ul className="normal4 gray-600">
-              <li>
-              · 방문 일정 
-              </li>
-              <li>
-              · 공사 일정
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
-          <img src={IconArrowRight} alt="" />
-        </div>
-        <div className={styles['process-wrapper']}>
-          <div className={styles['process']}>
-            <div className={styles['round-wrapper']}>
-              <img src={IconCompany}/>
-            </div>
-            <p className="heading6 blue-100 text-center mb-1">방문</p>
-            <ul className="normal4 gray-600">
-              <li>
-              · 공사현장 방문
-              </li>
-              <li>
-              · 견적 및 일정확인
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
-          <img src={IconArrowRight} alt="" />
-        </div>
-        <div className={styles['process-wrapper']}>
-          <div className={styles['process']}>
-            <div className={styles['round-wrapper']}>
-              <img src={IconTools}/>
-            </div>
-            <p className="heading6 blue-100 text-center mb-1">공사</p>
-            <ul className="normal4 gray-600">
-              <li>
-              · 신속 정확한 공사
-              </li>
-              <li>
-              · 네트워크 구축
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
-          <img src={IconArrowRight} alt="" />
-        </div>
-        <div className={styles['process-wrapper']}>
-          <div className={styles['process']}>
-            <div className={styles['round-wrapper']}>
-              <img src={IconRingingPhone}/>
-            </div>
-            <p className="heading6 blue-100 text-center mb-1">해피콜</p>
-          </div>
-        </div>
-      </div>
       </section>
       </>
   )
