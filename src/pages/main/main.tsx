@@ -15,7 +15,7 @@ import magnetic from 'assets/images/icon/icon-magnetic-card.svg';
 import thumbsUp from 'assets/images/icon/icon-thumbs-up.svg';
 import tools from 'assets/images/icon/icon-tools.svg';
 import verified from 'assets/images/icon/icon-verified-account.svg';
-import leftArrow from 'assets/images/icon/icon-left-arrow.svg';
+import arrowLeft from 'assets/images/icon/icon-arrow-left.svg';
 import clsx from 'clsx';
 import styles from './main.module.scss';
 import Ellipse from 'components/atoms/ellipse';
@@ -83,7 +83,7 @@ const Main = () => {
               <h3>견적문의</h3>
               <div className='d-flex justify-end'>
                 <Link to={'/order'}>
-                  <img src={leftArrow} alt='견적문의' />
+                  <img src={arrowLeft} alt='견적문의' />
                 </Link>
               </div>
             </div>
