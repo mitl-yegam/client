@@ -43,7 +43,7 @@ const Pagination = ({ row, totalCount, onFetchList }: Props) => {
   }, [currentPage, totalCount, row]);
 
   return (
-    <section className={clsx(styles['root'], 'container')}>
+    <section className={clsx(styles['root'], 'container', 'mb-10')}>
       <ol className={clsx(styles['ol-wrapper'], 'row', 'justify-center')}>
         {list}
       </ol>
