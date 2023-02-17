@@ -106,6 +106,7 @@ const Order = () => {
                     id='company'
                     value={form.company}
                     onChange={handleChange}
+                    autoFocus
                   />
                 </td>
               </tr>
@@ -136,7 +137,13 @@ const Order = () => {
               <tr>
                 <th>이메일</th>
                 <td>
-                  <input type='email' placeholder='*이메일' />
+                  <input
+                    type='email'
+                    placeholder='*이메일'
+                    id='email'
+                    value={form.email}
+                    onChange={handleChange}
+                  />
                 </td>
               </tr>
               <tr>

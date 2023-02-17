@@ -1,6 +1,10 @@
+import { CSSProperties } from 'react';
+
 export type Props = {
   text: string;
   color?: string;
   bgColor?: string;
-  onClick: (e: any) => void;
+  style?: CSSProperties;
+  textStyle?: CSSProperties;
+  onClick?: (e: any) => void;
 };

@@ -15,7 +15,7 @@ const Footer = () => {
               <span className='mr-4'>대표자명: 이성희</span>
               <br className='d-md-none' />
               <span>
-                전화번호:
+                전화번호:{' '}
                 <a className='white' href='tel:031-535-1324'>
                   031 535 1324
                 </a>

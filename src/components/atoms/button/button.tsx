@@ -7,10 +7,19 @@ const Button = ({
   bgColor = 'bg-blue-100',
   color = 'white',
   onClick,
+  style,
+  textStyle,
 }: Props) => {
   return (
-    <button className={clsx(styles['root'], bgColor)} onClick={onClick}>
-      {!!text && <span className={clsx('heading3', color)}>{text}</span>}
+    <button
+      className={clsx(styles['root'], bgColor)}
+      style={style}
+      onClick={onClick}>
+      {!!text && (
+        <span className={clsx('heading3', color)} style={textStyle}>
+          {text}
+        </span>
+      )}
     </button>
   );
 };

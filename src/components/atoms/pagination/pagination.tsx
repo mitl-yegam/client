@@ -47,7 +47,6 @@ const Pagination = ({ row, totalCount, onFetchList }: Props) => {
       <ol className={clsx(styles['ol-wrapper'], 'row', 'justify-center')}>
         {list}
       </ol>
-      ;
     </section>
   );
 };
