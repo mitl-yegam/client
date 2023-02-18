@@ -1,4 +1,4 @@
-@use "../abstracts/variables/colors";
+@use '../abstracts/variables/colors';
 
 :root {
   --gutter-x: 0;
@@ -7,6 +7,6 @@
 
 body {
   color: map-get(colors.$color-map, gray-700);
-  font-family: NotoSansKR, sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.5;
 }

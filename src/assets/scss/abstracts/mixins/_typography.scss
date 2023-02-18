@@ -1,5 +1,5 @@
-@mixin make-typography ($weight, $size) {
+@mixin make-typography($weight, $size) {
   font-weight: $weight;
   font-size: $size;
-  font-family: NotoSansKR, sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }

@@ -1,16 +1,1 @@
-//디자이너한테 사용한 폰트 굵기체 질문
-@font-face {
-  font-family: 'NotoSansKR';
-  font-weight: 400;  
-  src: url("../../fonts/NotoSansKR-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  font-weight: 500;
-  src: url("../../fonts/NotoSansKR-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  font-weight: 700;
-  src: url("../../fonts/NotoSansKR-Bold.woff") format("woff");
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
