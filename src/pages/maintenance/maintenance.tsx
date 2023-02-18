@@ -28,7 +28,11 @@ const Maintenance = () => {
       </section>
       <section className="container pt-12 pb-22">
         <div className="row gx-1 justify-between">
-          <div className={lanStyles['process-wrapper']}>
+          <div 
+            className={lanStyles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className={lanStyles['process']}>
               <div className={lanStyles['round-wrapper']}>
                 <img src={IconQuestionAnswer}/>
@@ -41,10 +45,18 @@ const Maintenance = () => {
               </ul>
             </div>
           </div>
-          <div className={clsx(lanStyles['arrow-wrapper'], 'd-none d-lg-block')}>
+          <div 
+            className={clsx(lanStyles['arrow-wrapper'], 'd-none d-lg-block')}
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <img src={IconArrowRight} alt="" />
           </div>
-          <div className={lanStyles['process-wrapper']}>
+          <div 
+            className={lanStyles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className={lanStyles['process']}>
               <div className={lanStyles['round-wrapper']}>
                 <img src={IconAccount}/>
@@ -59,10 +71,18 @@ const Maintenance = () => {
               </ul>
             </div>
           </div>
-          <div className={clsx(lanStyles['arrow-wrapper'], 'd-none d-lg-block')}>
+          <div 
+            className={clsx(lanStyles['arrow-wrapper'], 'd-none d-lg-block')}
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <img src={IconArrowRight} alt="" />
           </div>
-          <div className={lanStyles['process-wrapper']}>
+          <div 
+            className={lanStyles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className={lanStyles['process']}>
               <div className={lanStyles['round-wrapper']}>
                 <img src={IconSearchList}/>
@@ -77,10 +97,18 @@ const Maintenance = () => {
               </ul>
             </div>
           </div>
-          <div className={clsx(lanStyles['arrow-wrapper'], 'd-none d-lg-block')}>
+          <div 
+            className={clsx(lanStyles['arrow-wrapper'], 'd-none d-lg-block')}
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <img src={IconArrowRight} alt="" />
           </div>
-          <div className={lanStyles['process-wrapper']}>
+          <div 
+            className={lanStyles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <div className={lanStyles['process']}>
               <div className={lanStyles['round-wrapper']}>
                 <img src={IconWarehouse}/>
@@ -94,10 +122,18 @@ const Maintenance = () => {
               </ul>
             </div>
           </div>
-          <div className={clsx(lanStyles['arrow-wrapper'], 'd-none d-lg-block')}>
+          <div 
+            className={clsx(lanStyles['arrow-wrapper'], 'd-none d-lg-block')}
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <img src={IconArrowRight} alt="" />
           </div>
-          <div className={lanStyles['process-wrapper']}>
+          <div 
+            className={lanStyles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
             <div className={lanStyles['process']}>
               <div className={lanStyles['round-wrapper']}>
                 <img src={IconRoundedCheckWhite}/>

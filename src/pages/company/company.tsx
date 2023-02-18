@@ -51,19 +51,34 @@ const Company = () => {
                     </p>
                 </div>
                 <div className="d-flex justify-between flex-nowrap">
-                    <div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
                         <img src={Certification1} width="100%" alt="장애인기업확인서 이미지"/>
                     </div>
-                    <div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
                         <img src={Certification2} width="100%" alt="사업자등록증 이미지"/>
                     </div>
-                    <div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="600"
+                    >
                         <img src={Certification3} width="100%" alt="정보통신공사업등록증 이미지"/>
                     </div>
-                    <div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="800"
+                    >
                         <img src={Certification4} width="100%" alt="여성기업확인서 이미지"/>
                     </div>
-                    <div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="1000"
+                    >
                         <img src={Certification5} width="100%" alt="중소기업확인서 이미지"/>
                     </div>
                 </div>

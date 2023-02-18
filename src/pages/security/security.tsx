@@ -38,25 +38,41 @@ const Security = () => {
     <section className="py-5 py-md-12">
       <div className="container py-6">
         <div className="row flex-between">
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className={enterpriseStyles['round-wrapper']}>
               <img src={IconProtect} className="mb-3"/>
               <p className="heading6 blue-100">탁월한 <br/>보안과 안전</p>
             </div>
           </div>
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className={clsx(enterpriseStyles['round-wrapper'], enterpriseStyles['round-blue'])}>
               <img src={IconScorecard} className="mb-3"/>
               <p className="heading6 white">상담부터 가입,<br/>설치, 유지보수까지</p>
             </div>
           </div>
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className={enterpriseStyles['round-wrapper']}>
               <img src={IconGuarantee} className="mb-3"/>
               <p className="heading6 blue-100">100% 광케이블로<br/>고품질의 서비스 제공</p>
             </div>
           </div>
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <div className={clsx(enterpriseStyles['round-wrapper'], enterpriseStyles['round-blue'])}>
               <img src={IconTools} className="mb-3"/>
               <p className="heading6 white">불편 접수시 빠른 조치 가능</p>

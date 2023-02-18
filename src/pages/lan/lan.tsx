@@ -31,19 +31,35 @@ const Lan = () => {
       <section className="container py-12">
         <h2 className="blue-100 text-center mb-13">랜공사, 이럴때 필요해요!</h2>
         <div className="row gx-1">
-          <div className="col-6 col-lg-3">
+          <div 
+            className="col-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <img src={LanExample1} width="100%" alt="" />
             <p className="heading4 text-center mt-2">신규사무실 오픈</p>
           </div>
-          <div className="col-6 col-lg-3">
+          <div 
+            className="col-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <img src={LanExample2} width="100%" alt="" />
             <p className="heading4 text-center mt-2">사무실 이전</p>
           </div>
-          <div className="col-6 col-lg-3">
+          <div 
+            className="col-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <img src={LanExample3} width="100%" alt="" />
             <p className="heading4 text-center mt-2">사무실 확장</p>
           </div>
-          <div className="col-6 col-lg-3">
+          <div 
+            className="col-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <img src={LanExample4} width="100%" alt="" />
             <p className="heading4 text-center mt-2">자리 재배치</p>
           </div>
@@ -67,7 +83,11 @@ const Lan = () => {
       </section>
       <section className="container pt-12 pb-22">
         <div className="row gx-1 justify-between">
-          <div className={styles['process-wrapper']}>
+          <div 
+            className={styles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className={styles['process']}>
               <div className={styles['round-wrapper']}>
                 <img src={IconQuestionAnswer}/>
@@ -83,10 +103,18 @@ const Lan = () => {
               </ul>
             </div>
           </div>
-          <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
+          <div 
+            className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <img src={IconArrowRight} alt="" />
           </div>
-          <div className={styles['process-wrapper']}>
+          <div 
+            className={styles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className={styles['process']}>
               <div className={styles['round-wrapper']}>
                 <img src={IconSignUpCalendar}/>
@@ -102,10 +130,18 @@ const Lan = () => {
               </ul>
             </div>
           </div>
-          <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
+          <div 
+            className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <img src={IconArrowRight} alt="" />
           </div>
-          <div className={styles['process-wrapper']}>
+          <div 
+            className={styles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className={styles['process']}>
               <div className={styles['round-wrapper']}>
                 <img src={IconCompany}/>
@@ -121,10 +157,18 @@ const Lan = () => {
               </ul>
             </div>
           </div>
-          <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
+          <div 
+            className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <img src={IconArrowRight} alt="" />
           </div>
-          <div className={styles['process-wrapper']}>
+          <div 
+            className={styles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <div className={styles['process']}>
               <div className={styles['round-wrapper']}>
                 <img src={IconTools}/>
@@ -140,10 +184,18 @@ const Lan = () => {
               </ul>
             </div>
           </div>
-          <div className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}>
+          <div 
+            className={clsx(styles['arrow-wrapper'], 'd-none d-lg-block')}
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <img src={IconArrowRight} alt="" />
           </div>
-          <div className={styles['process-wrapper']}>
+          <div 
+            className={styles['process-wrapper']}
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
             <div className={styles['process']}>
               <div className={styles['round-wrapper']}>
                 <img src={IconRingingPhone}/>

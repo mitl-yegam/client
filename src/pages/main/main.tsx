@@ -127,21 +127,41 @@ const Main = () => {
           </li>
         </ul>
         <ul className={'row my-13 justify-center'}>
-          <li className='col-xs-6 col-md-3 d-center'>
+          <li 
+            className='col-xs-6 col-md-3 d-center'
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <Ellipse icon={magnetic} text={'합리적 가격'} />
           </li>
-          <li className='col-xs-6 col-md-3 d-center'>
+          <li 
+            className='col-xs-6 col-md-3 d-center'
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <Ellipse icon={thumbsUp} text={'최고급 자재'} />
           </li>
-          <li className='col-xs-6 col-md-3 d-center'>
+          <li 
+            className='col-xs-6 col-md-3 d-center'
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <Ellipse icon={tools} text={'무상 A/S'} />
           </li>
-          <li className='col-xs-6 col-md-3 d-center'>
+          <li 
+            className='col-xs-6 col-md-3 d-center'
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <Ellipse icon={verified} text={'양심기업'} />
           </li>
         </ul>
         <div className={clsx(styles['order-wrapper'], 'row', 'gx-1', 'gy-0')}>
-          <div className='col col-md-6 mb-5 mb-md-0'>
+          <div 
+            className='col col-md-6 mb-5 mb-md-0'
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className={clsx(styles['fast-consulting'], 'bg-gray-100')}>
               <h3>빠른상담</h3>
               <p>{companyInfo.officeHours}</p>
@@ -160,7 +180,11 @@ const Main = () => {
               </div>
             </Link>
           </div>
-          <div className='col col-md-6'>
+          <div 
+            className='col col-md-6'
+            data-aos="fade-left"
+            data-aos-delay="800"
+          >
             <div className={clsx(styles['fast-quote-contact'])}>
               <div className='d-flex align-items-center gap-9'>
                 <h3>빠른견적 문의</h3>

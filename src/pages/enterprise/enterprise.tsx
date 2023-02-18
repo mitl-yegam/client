@@ -38,7 +38,11 @@ const Enterprise = () => {
     <section className="py-5 py-md-12">
       <div className="container py-6">
         <div className="row flex-between">
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className={styles['round-wrapper']}>
               <img src={IconMonitor} className="mb-3"/>
               <p className="mb-2 heading6 blue-100">PC대수 무제한</p>
@@ -46,7 +50,11 @@ const Enterprise = () => {
               <p className="gray-500">· 접속제한 없는 서비스 제공</p>
             </div>
           </div>
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className={clsx(styles['round-wrapper'], styles['round-blue'])}>
               <img src={IconMagneticCard} className="mb-3"/>
               <p className="mb-2 heading6 white">저렴한 이용요금</p>
@@ -54,7 +62,11 @@ const Enterprise = () => {
               <p className="gray-200">고정·유동 IP 제공</p>
             </div>
           </div>
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className={styles['round-wrapper']}>
               <img src={IconCloudBroadcasting} className="mb-3"/>
               <p className="mb-2 heading6 blue-100">최적의 인터넷속도</p>
@@ -62,7 +74,11 @@ const Enterprise = () => {
               <p className="gray-500">최적의 인터넷 속도 선택</p>
             </div>
           </div>
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <div className={clsx(styles['round-wrapper'], styles['round-blue'])}>
               <img src={IconAccounting} className="mb-3"/>
               <p className="mb-2 heading6 white">맞춤형 컨설팅 제공</p>

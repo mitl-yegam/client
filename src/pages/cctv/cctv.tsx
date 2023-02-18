@@ -25,22 +25,38 @@ const Cctv = () => {
       <section className="py-5 py-md-12">
       <div className="container py-6">
         <div className="row flex-between">
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className={enterpriseStyles['round-wrapper']}>
               <p className="bold4 blue-100">사각지대 최소화<br/>설계 및 시공</p>
             </div>
           </div>
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className={clsx(enterpriseStyles['round-wrapper'], enterpriseStyles['round-blue'])}>
               <p className="bold4 white">녹화기 · 카메라<br/>점검 및 유지보수 관리</p>
             </div>
           </div>
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className={enterpriseStyles['round-wrapper']}>
               <p className="bold4 blue-100">노후된<br/>녹화기 및 카메라<br/>교체시공</p>
             </div>
           </div>
-          <div className="col col-sm-6 col-lg-3">
+          <div 
+            className="col col-sm-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <div className={clsx(enterpriseStyles['round-wrapper'], enterpriseStyles['round-blue'])}>
               <p className="bold4 white">인터넷 기반<br/>안정적인 모바일 ·PC<br/>모니터링 환경 구성</p>
             </div>
