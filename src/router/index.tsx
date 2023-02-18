@@ -1,5 +1,4 @@
 import Layout from 'components/organism/layout';
-import LayoutSample from 'pages/layout';
 import Portfolio from 'pages/portfolio';
 import { useEffect } from 'react';
 import {
@@ -46,7 +45,6 @@ const Routes = () => {
         <Route path='/qna' element={<QnA />} /> {/* 자주하는질문 */}
         <Route path='/order' element={<Order />} /> {/* 견적문의 */}
         <Route path='/portfolio' element={<Portfolio />} /> {/* 설치사례 */}
-        <Route path='/layout' element={<LayoutSample />} /> {/* layout */}
         <Route path='*' element={<NotFound />} /> {/* 404페이지 */}
       </ReactRouter>
     </Layout>
