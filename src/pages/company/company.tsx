@@ -11,6 +11,7 @@ import NewExample from "../../assets/images/etc/news-example.png";
 import TopTitle from "components/molecules/topTitle";
 import styles from "./company.module.scss";
 import companyData from "./company.json";
+import shortid from "shortid";
 
 const clientImg:{[key:string]: string} = {
     logo1: LogoExample
@@ -71,7 +72,10 @@ const Company = () => {
                         {
                             companyData.client.map(item => {
                                 return (
-                                    <div className={clsx(styles['logo-wrapper'], 'col-6 col-md-2')}>
+                                    <div 
+                                        key={shortid.generate()}
+                                        className={clsx(styles['logo-wrapper'], 'col-6 col-md-2')}
+                                    >
                                         <img src={clientImg[item.imgId]} alt={item.alt}/>    
                                     </div>
                                 )
@@ -90,15 +94,18 @@ const Company = () => {
                         {
                             companyData.share.map(item => {
                                 return (
-                                    <div className="col col-md-6 col-lg-4 d-center flex-column">
-                                    <div className="pb-6">
-                                        <img src={shareImg[item.imgId]} width="100%" alt={item.alt} />
-                                        <p className="mt-5 bold3 white-pre-wrap">{item.title}</p>
-                                        <p className="white-pre-wrap">
-                                            {item.content}
-                                        </p>
+                                    <div 
+                                        key={shortid.generate()}
+                                        className="col col-md-6 col-lg-4 d-center flex-column"
+                                    >
+                                        <div className="pb-6">
+                                            <img src={shareImg[item.imgId]} width="100%" alt={item.alt} />
+                                            <p className="mt-5 bold3 white-pre-wrap">{item.title}</p>
+                                            <p className="white-pre-wrap">
+                                                {item.content}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
                                 )
                             })
                         }

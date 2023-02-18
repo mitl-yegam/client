@@ -17,7 +17,7 @@ const Security = () => {
     <section className="container py-0">
       <div className={clsx(enterpriseStyles['tab'], 'py-5 py-md-7')}>
         <Link to="/subscription-enterprise">
-          <span className="normal2">기업용 인터넷 가입</span>
+          <span className="normal2 gray-300">기업용 인터넷 가입</span>
         </Link>
         <div className="normal2 gray-300 mx-3 mx-md-6">|</div>
         <span className="normal2 blue-100 text-bolder">전용회선</span>
@@ -26,8 +26,8 @@ const Security = () => {
     <section className="container-fluid bg-blue-100 p-6 p-md-16">
       <div className="container white text-center">
         <h1 className="mb-5 mb-md-11">전용회선 가입</h1>
-        <p className="mb-5 normal1">
-        완벽한 보안성능을 갖춘 24시간 <span className={styles['dot-position']}>단독<span className={styles['dot']}>.&nbsp;&nbsp;.</span></span>회선 <br/>
+        <p className={clsx(styles['description'], 'mb-5 normal1')}>
+        완벽한 보안성능을 갖춘 24시간 <span className={styles['dot-position']}>단<span className={styles['dot']}>.</span></span><span className={styles['dot-position']}>독<span className={styles['dot']}>.</span></span>회선 <br/>
         원거리 두 지점을 하나의 LAN 구간처럼 음성·데이터를 전송할 수 있도록 연결해 줍니다.
         </p>
         <p className="normal1">빠른 전송과 보안이 필요한 기업 · 공공기관 · 금융기관에 추천드립니다.</p>

@@ -18,9 +18,9 @@ const Enterprise = () => {
         <Link to="/subscription-enterprise">
           <span className="normal2 blue-100 text-bolder">기업용 인터넷 가입</span>
         </Link>
-        <div className="normal2 gray-300 mx-3 mx-md-6">|</div>
+        <div className="normal2 mx-3 mx-md-6 gray-300">|</div>
         <Link to="/subscription-security">
-          <span className="normal2">전용회선</span>
+          <span className="normal2 gray-300">전용회선</span>
         </Link>
       </div>
     </section>
@@ -76,12 +76,12 @@ const Enterprise = () => {
     </section>
     <section className="container-fluid bg-gray-100 py-15 py-md-25">
       <div className="container">
-      <h2 className="blue-100 text-center mb-6">이런 분들께 추천드립니다!</h2>
+      <h2 className="blue-100 text-center mb-10">이런 분들께 추천드립니다!</h2>
       <div className="row">
         <div className="col col-md-6 col-lg-4">
           <div className={styles['recommend-wrapper']}>
             <img src={RecommendImage1} width="100%" />
-            <p className="bold4 gray-800 mt-2">
+            <p className="bold4 gray-800 mt-3">
             전용회선 이용요금이 <br/> 부담스러운 <br/> 중소규모 사업장
             </p>
           </div>
@@ -89,7 +89,7 @@ const Enterprise = () => {
         <div className="col col-md-6 col-lg-4">
           <div className={styles['recommend-wrapper']}>
             <img src={RecommendImage2} width="100%" />
-            <p className="bold4 gray-800 mt-2">
+            <p className="bold4 gray-800 mt-3">
             사업 환경에 따라<br/> 다수의 PC에 IP서비스 이용이 <br/> 필요한 사업장
             </p>
           </div>
@@ -97,7 +97,7 @@ const Enterprise = () => {
         <div className="col col-md-6 col-lg-4">
           <div className={styles['recommend-wrapper']}>
             <img src={RecommendImage3} width="100%" />
-            <p className="bold4 gray-800 mt-2">
+            <p className="bold4 gray-800 mt-3">
             업무상 대용량 자료 전송이 <br/> 많은 사업장
             </p>
           </div>
