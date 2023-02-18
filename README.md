@@ -36,3 +36,10 @@
     - 방법: json객체로 데이터를 추가하거나 수정한다.
 
 
+#### `애니메이션 라이브러리`
+- AOS를 사용했습니다.
+    - 공식문서
+        - https://www.npmjs.com/package/aos
+    - 초기화 로직 위치 
+        - src/index.tsx
+    - data-aos로 전체 검색 시 사용된 태그들을 확인할 수 있습니다.
