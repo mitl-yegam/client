@@ -9,6 +9,7 @@ import RecommendImage3 from "assets/images/etc/recommend-case-3.png";
 import BannerImage from "assets/images/banner/banner-enterprise.png";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
+import TopBlueBanner from "components/molecules/topBuleBanner";
 
 const Enterprise = () => {
   return (
@@ -24,15 +25,13 @@ const Enterprise = () => {
         </Link>
       </div>
     </section>
-    <section className="container-fluid bg-blue-100 p-6 p-md-16">
-      <div className="container white text-center">
-        <h1 className="mb-5 mb-md-11">기업용 인터넷 가입</h1>
-        <p className="mb-5 normal1">
-        기업 인터넷과 전화를 <br className="d-md-none"/>안정적이면서 저렴하게<br className="d-none d-md-block"/> 고객의 <br className="d-none d-md-none"/>환경에 맞춤으로 권해드립니다.
-        </p>
-        <p className="normal2">KT · SK· LG 3사 모두 가능</p>
-      </div>
-    </section>
+    <TopBlueBanner>
+      <h1 className="mb-5 mb-md-11">기업용 인터넷 가입</h1>
+      <p className="mb-5 normal1">
+      기업 인터넷과 전화를 <br className="d-md-none"/>안정적이면서 저렴하게<br className="d-none d-md-block"/> 고객의 <br className="d-none d-md-none"/>환경에 맞춤으로 권해드립니다.
+      </p>
+      <p className="normal2">KT · SK· LG 3사 모두 가능</p>
+    </TopBlueBanner>
     <section className={clsx('container-fluid', styles['banner-warpper'])}>
       <img src={BannerImage} width="100%"/>
     </section>

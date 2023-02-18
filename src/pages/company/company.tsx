@@ -12,6 +12,7 @@ import TopTitle from "components/molecules/topTitle";
 import styles from "./company.module.scss";
 import companyData from "./company.json";
 import shortid from "shortid";
+import TopBlueBanner from "components/molecules/topBuleBanner";
 
 const clientImg:{[key:string]: string} = {
     logo1: LogoExample
@@ -29,11 +30,11 @@ const Company = () => {
             <section className="container py-0">
                 <TopTitle title="(주) 예감" borderBlue={false}/>
             </section>
-            <section className="container-fluid bg-blue-100 p-6 p-md-15">
+            <TopBlueBanner>
                 <div className="container white text-center">
                     <h1 className="bold1">전문적인 기술과 노하우로 책임 시공하는 <br/>종합 정보통신 공사업체</h1>
                 </div>
-            </section>
+            </TopBlueBanner>
             <section className="container">
                 <div className="d-center flex-column py-12">
                     <img src={IconRoundedCheck}/>

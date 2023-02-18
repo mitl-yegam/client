@@ -12,20 +12,19 @@ import IconCompany from "../../assets/images/icon/icon-company.svg";
 import IconRingingPhone from "../../assets/images/icon/icon-ringing-phone.svg";
 import IconTools from "../../assets/images/icon/icon-tools.svg";
 import IconArrowRight from "../../assets/images/icon/icon-arrow-right.svg";
+import TopBlueBanner from "components/molecules/topBuleBanner";
 
 const Lan = () => {
 
   return (
     <>
-      <section className="container-fluid bg-blue-100 p-6 p-md-16">
-          <div className="container white text-center">
-            <h1 className="mb-5 mb-md-11">랜공사</h1>
-            <p className="mb-5 normal1">
-              인터넷 환경이 필요한 곳에 통신 장비를 이용하여 네트워크를 구성하여<br/>
-              PC · 전화기 ·와이파이 ·복합기기 등에 연결하는 통신 배선공사를 말합니다.
-            </p>
-          </div>
-      </section>
+      <TopBlueBanner>
+        <h1 className="mb-5 mb-md-11">랜공사</h1>
+        <p className="mb-5 normal1">
+          인터넷 환경이 필요한 곳에 통신 장비를 이용하여 네트워크를 구성하여<br/>
+          PC · 전화기 ·와이파이 ·복합기기 등에 연결하는 통신 배선공사를 말합니다.
+        </p>
+      </TopBlueBanner>
       <section className={clsx('container-fluid', enterpriseStyles['banner-warpper'])}>
         <img src={BannerImage} width="100%"/>
       </section>

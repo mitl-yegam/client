@@ -9,21 +9,20 @@ import IconSearchList from "../../assets/images/icon/icon-search-list.svg";
 import IconWarehouse from "../../assets/images/icon/icon-warehouse.svg";
 import IconRoundedCheckWhite from "../../assets/images/icon/icon-rounded-check-white.svg";
 import IconArrowRight from "../../assets/images/icon/icon-arrow-right.svg";
+import TopBlueBanner from "components/molecules/topBuleBanner";
 
 const Maintenance = () => {
 
   return (
     <>
-      <section className="container-fluid bg-blue-100 p-6 p-md-16">
-        <div className="container white text-center">
-          <h1 className="mb-5 mb-md-11">통신유지보수</h1>
-          <p className="mb-5 normal1">
-            고객의 환경에 맞게 통신장비와 구내 통신설비를 최적으로 이용할 수 있도록 관리하며, <br/>
-            운영하시는데 통산장비 장애로 영업에 지장이 생기지 않도록 <br/>
-            신속하게 유지보수 해드립니다.
-          </p>
-        </div>
-      </section>
+      <TopBlueBanner>
+        <h1 className="mb-5 mb-md-11">통신유지보수</h1>
+        <p className="mb-5 normal1">
+          고객의 환경에 맞게 통신장비와 구내 통신설비를 최적으로 이용할 수 있도록 관리하며, <br/>
+          운영하시는데 통산장비 장애로 영업에 지장이 생기지 않도록 <br/>
+          신속하게 유지보수 해드립니다.
+        </p>
+      </TopBlueBanner>
       <section className={clsx('container-fluid', enterpriseStyles['banner-warpper'])}>
         <img src={BannerImage} width="100%"/>
       </section>
