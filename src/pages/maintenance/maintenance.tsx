@@ -28,7 +28,7 @@ const Maintenance = () => {
         <img src={BannerImage} width="100%"/>
       </section>
       <section className="container pt-12 pb-22">
-        <div className="row gx-1 justify-between">
+        <div className="row gx-1 justify-center">
           <div className={lanStyles['process-wrapper']}>
             <div className={lanStyles['process']}>
               <Ellipse icon={IconQuestionAnswer} size="small"/>

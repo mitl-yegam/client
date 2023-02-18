@@ -67,7 +67,7 @@ const Lan = () => {
         </div>
       </section>
       <section className="container pt-12 pb-22">
-        <div className="row gx-1 justify-between">
+        <div className="row gx-1 justify-center">
           <div className={styles['process-wrapper']}>
             <div className={styles['process']}>
               <Ellipse icon={IconQuestionAnswer} size="small"/>
