@@ -3,13 +3,14 @@ import styles from "./maintenance.module.scss";
 import lanStyles from "../lan/lan.module.scss";
 import enterpriseStyles from "../enterprise/enterprise.module.scss";
 import BannerImage from "../../assets/images/banner/banner-maintenance.png";
-import IconQuestionAnswer from "../../assets/images/icon/icon-question-answer.svg";
-import IconAccount from "../../assets/images/icon/icon-account.svg";
-import IconSearchList from "../../assets/images/icon/icon-search-list.svg";
-import IconWarehouse from "../../assets/images/icon/icon-warehouse.svg";
-import IconRoundedCheckWhite from "../../assets/images/icon/icon-rounded-check-white.svg";
-import IconArrowRight from "../../assets/images/icon/icon-arrow-right.svg";
+import IconQuestionAnswer from "../../assets/images/icon/icon-question-answer.png";
+import IconAccount from "../../assets/images/icon/icon-account.png";
+import IconSearchList from "../../assets/images/icon/icon-search-list.png";
+import IconWarehouse from "../../assets/images/icon/icon-warehouse.png";
+import IconRoundedCheckWhite from "../../assets/images/icon/icon-rounded-check-white.png";
+import IconArrowRight from "../../assets/images/icon/icon-arrow-right.png";
 import TopBlueBanner from "components/molecules/topBuleBanner";
+import Ellipse from "components/atoms/ellipse";
 
 const Maintenance = () => {
 
@@ -30,10 +31,8 @@ const Maintenance = () => {
         <div className="row gx-1 justify-between">
           <div className={lanStyles['process-wrapper']}>
             <div className={lanStyles['process']}>
-              <div className={lanStyles['round-wrapper']}>
-                <img src={IconQuestionAnswer}/>
-              </div>
-              <p className="heading6 blue-100 text-center mb-1">고장접수</p>
+              <Ellipse icon={IconQuestionAnswer} size="small"/>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">고장접수</p>
               <ul className="normal4 gray-600 text-center">
                 <li>
                   고객으로부터 <br/> 불편사항 접수
@@ -46,10 +45,8 @@ const Maintenance = () => {
           </div>
           <div className={lanStyles['process-wrapper']}>
             <div className={lanStyles['process']}>
-              <div className={lanStyles['round-wrapper']}>
-                <img src={IconAccount}/>
-              </div>
-              <p className="heading6 blue-100 text-center mb-1">인력배정</p>
+              <Ellipse icon={IconAccount} size="small"/>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">인력배정</p>
               <ul className="normal4 gray-600 text-center">
                 <li>
                   사내  전문인력<br/>
@@ -64,10 +61,8 @@ const Maintenance = () => {
           </div>
           <div className={lanStyles['process-wrapper']}>
             <div className={lanStyles['process']}>
-              <div className={lanStyles['round-wrapper']}>
-                <img src={IconSearchList}/>
-              </div>
-              <p className="heading6 blue-100 text-center mb-1">고장분석</p>
+              <Ellipse icon={IconSearchList} size="small"/>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">고장분석</p>
               <ul className="normal4 gray-600 text-center">
                 <li>
                   시스템 점검  및<br/>
@@ -82,10 +77,8 @@ const Maintenance = () => {
           </div>
           <div className={lanStyles['process-wrapper']}>
             <div className={lanStyles['process']}>
-              <div className={lanStyles['round-wrapper']}>
-                <img src={IconWarehouse}/>
-              </div>
-              <p className="heading6 blue-100 text-center mb-1">현장출동</p>
+              <Ellipse icon={IconWarehouse} size="small"/>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">현장출동</p>
               <ul className="normal4 gray-600 text-center">
                 <li>
                   원격제어 및<br/>
@@ -99,9 +92,7 @@ const Maintenance = () => {
           </div>
           <div className={lanStyles['process-wrapper']}>
             <div className={lanStyles['process']}>
-              <div className={lanStyles['round-wrapper']}>
-                <img src={IconRoundedCheckWhite}/>
-              </div>
+              <Ellipse icon={IconRoundedCheckWhite} size="small"/>
               <p className="heading6 blue-100 text-center mb-1">장애처리</p>
               <ul>
                 <li className="normal4 gray-600 text-center">

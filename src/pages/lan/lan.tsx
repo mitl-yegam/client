@@ -6,13 +6,14 @@ import LanExample1 from "../../assets/images/etc/lan-example-1.png";
 import LanExample2 from "../../assets/images/etc/lan-example-2.png";
 import LanExample3 from "../../assets/images/etc/lan-example-3.png";
 import LanExample4 from "../../assets/images/etc/lan-example-4.png";
-import IconQuestionAnswer from "../../assets/images/icon/icon-question-answer.svg";
-import IconSignUpCalendar from "../../assets/images/icon/icon-sign-up-calendar.svg";
-import IconCompany from "../../assets/images/icon/icon-company.svg";
-import IconRingingPhone from "../../assets/images/icon/icon-ringing-phone.svg";
-import IconTools from "../../assets/images/icon/icon-tools.svg";
-import IconArrowRight from "../../assets/images/icon/icon-arrow-right.svg";
+import IconQuestionAnswer from "../../assets/images/icon/icon-question-answer.png";
+import IconSignUpCalendar from "../../assets/images/icon/icon-sign-up-calendar.png";
+import IconCompany from "../../assets/images/icon/icon-company.png";
+import IconRingingPhone from "../../assets/images/icon/icon-ringing-phone.png";
+import IconTools from "../../assets/images/icon/icon-tools.png";
+import IconArrowRight from "../../assets/images/icon/icon-arrow-right.png";
 import TopBlueBanner from "components/molecules/topBuleBanner";
+import Ellipse from "components/atoms/ellipse";
 
 const Lan = () => {
 
@@ -69,10 +70,8 @@ const Lan = () => {
         <div className="row gx-1 justify-between">
           <div className={styles['process-wrapper']}>
             <div className={styles['process']}>
-              <div className={styles['round-wrapper']}>
-                <img src={IconQuestionAnswer}/>
-              </div>
-              <p className="heading6 blue-100 text-center mb-1">상담문의</p>
+              <Ellipse icon={IconQuestionAnswer} size="small"/>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">상담문의</p>
               <ul className="normal4 gray-600">
                 <li>
                 · 견적게시판
@@ -88,10 +87,8 @@ const Lan = () => {
           </div>
           <div className={styles['process-wrapper']}>
             <div className={styles['process']}>
-              <div className={styles['round-wrapper']}>
-                <img src={IconSignUpCalendar}/>
-              </div>
-              <p className="heading6 blue-100 text-center mb-1">일정조율</p>
+              <Ellipse icon={IconSignUpCalendar} size="small"/>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">일정조율</p>
               <ul className="normal4 gray-600">
                 <li>
                 · 방문 일정 
@@ -107,10 +104,8 @@ const Lan = () => {
           </div>
           <div className={styles['process-wrapper']}>
             <div className={styles['process']}>
-              <div className={styles['round-wrapper']}>
-                <img src={IconCompany}/>
-              </div>
-              <p className="heading6 blue-100 text-center mb-1">방문</p>
+              <Ellipse icon={IconCompany} size="small"/>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">방문</p>
               <ul className="normal4 gray-600">
                 <li>
                 · 공사현장 방문
@@ -126,10 +121,8 @@ const Lan = () => {
           </div>
           <div className={styles['process-wrapper']}>
             <div className={styles['process']}>
-              <div className={styles['round-wrapper']}>
-                <img src={IconTools}/>
-              </div>
-              <p className="heading6 blue-100 text-center mb-1">공사</p>
+              <Ellipse icon={IconTools} size="small"/>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">공사</p>
               <ul className="normal4 gray-600">
                 <li>
                 · 신속 정확한 공사
@@ -145,10 +138,8 @@ const Lan = () => {
           </div>
           <div className={styles['process-wrapper']}>
             <div className={styles['process']}>
-              <div className={styles['round-wrapper']}>
-                <img src={IconRingingPhone}/>
-              </div>
-              <p className="heading6 blue-100 text-center mb-1">해피콜</p>
+              <Ellipse icon={IconRingingPhone} size="small"/>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">해피콜</p>
             </div>
           </div>
         </div>

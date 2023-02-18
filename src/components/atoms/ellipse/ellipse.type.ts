@@ -1,4 +1,5 @@
 export type Props = {
   icon: string;
-  text: string;
+  text?: string;
+  size: 'small' | 'medium'
 };

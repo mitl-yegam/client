@@ -11,10 +11,10 @@ import mainCase1 from 'assets/images/etc/main-case-1.png';
 import mainCase2 from 'assets/images/etc/main-case-2.png';
 import mainCase3 from 'assets/images/etc/main-case-3.png';
 import mainCase4 from 'assets/images/etc/main-case-4.png';
-import magnetic from 'assets/images/icon/icon-magnetic-card.svg';
-import thumbsUp from 'assets/images/icon/icon-thumbs-up.svg';
-import tools from 'assets/images/icon/icon-tools.svg';
-import verified from 'assets/images/icon/icon-verified-account.svg';
+import magnetic from 'assets/images/icon/icon-magnetic-card.png';
+import thumbsUp from 'assets/images/icon/icon-thumbs-up.png';
+import tools from 'assets/images/icon/icon-tools.png';
+import verified from 'assets/images/icon/icon-verified-account.png';
 import arrowLeft from 'assets/images/icon/icon-arrow-left.svg';
 import clsx from 'clsx';
 import styles from './main.module.scss';
@@ -128,16 +128,16 @@ const Main = () => {
         </ul>
         <ul className={'row my-13 justify-center'}>
           <li className='col-xs-6 col-md-3 d-center'>
-            <Ellipse icon={magnetic} text={'합리적 가격'} />
+            <Ellipse icon={magnetic} text={'합리적 가격'} size="medium"/>
           </li>
           <li className='col-xs-6 col-md-3 d-center'>
-            <Ellipse icon={thumbsUp} text={'최고급 자재'} />
+            <Ellipse icon={thumbsUp} text={'최고급 자재'} size="medium"/>
           </li>
           <li className='col-xs-6 col-md-3 d-center'>
-            <Ellipse icon={tools} text={'무상 A/S'} />
+            <Ellipse icon={tools} text={'무상 A/S'} size="medium"/>
           </li>
           <li className='col-xs-6 col-md-3 d-center'>
-            <Ellipse icon={verified} text={'양심기업'} />
+            <Ellipse icon={verified} text={'양심기업'} size="medium"/>
           </li>
         </ul>
         <div className={clsx(styles['order-wrapper'], 'row', 'gx-1', 'gy-0')}>

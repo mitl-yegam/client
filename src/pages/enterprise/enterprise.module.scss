@@ -37,6 +37,10 @@
     padding: 16px;
     margin: 0 auto;
 
+    & img {
+        width: 80px;
+    }
+
     &.round-blue {
         background-color: map-get(colors.$color-map, blue-100);
     }

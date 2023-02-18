@@ -1,6 +1,6 @@
 import styles from './topBanner.module.scss';
 import clsx from 'clsx';
-import HeadSetSVG from 'assets/images/icon/icon-headset.svg';
+import HeadSet from 'assets/images/icon/icon-headset.png';
 import BannerTop from 'assets/images/banner/banner-top.png';
 import ShadowBox from 'components/atoms/shadowBox';
 import companyInfo from 'pages/main/company.json';
@@ -20,7 +20,7 @@ const TopBanner = () => {
         <ShadowBox>
           <div className={clsx(styles['call-box'])}>
             <div className='mr-4'>
-              <img src={HeadSetSVG} alt='전화번호' />
+              <img src={HeadSet} alt='전화번호' />
             </div>
             <span className='bold2'>
               <a
