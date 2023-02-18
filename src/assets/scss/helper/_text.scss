@@ -2,13 +2,19 @@
 
 @each $align in text.$text-align-map {
   .text-#{$align} {
-    text-align: $align;
+    text-align: $align !important;
   }
 }
 
 @each $name,
 $weight in text.$text-weight {
   .text-#{$name} {
-    font-weight: $weight;
+    font-weight: $weight !important;
   }
 }
+
+@each $name in text.$white-space {
+  .white-#{$name} {
+    white-space: $name !important;
+  }
+} 
