@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import HeadSetSVG from 'assets/images/icon/icon-headset.svg';
 import BannerTop from 'assets/images/banner/banner-top.png';
 import ShadowBox from 'components/atoms/shadowBox';
+import companyInfo from 'pages/main/company.json';
 
 const TopBanner = () => {
   return (
@@ -22,8 +23,10 @@ const TopBanner = () => {
               <img src={HeadSetSVG} alt='전화번호' />
             </div>
             <span className='bold2'>
-              <a className='white' href='tel:031-535-1324'>
-                031) 535-1324
+              <a
+                className='white'
+                href={`tel:${companyInfo.phone.replace(/[^\d]/g, '')}`}>
+                {companyInfo.phone}
               </a>
             </span>
           </div>

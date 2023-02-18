@@ -23,6 +23,7 @@ import { Link } from 'react-router-dom';
 import Button from 'components/atoms/button';
 import Modal from 'components/atoms/modal';
 import { useState, useCallback } from 'react';
+import companyInfo from './company.json';
 
 const Main = () => {
   const [open, setOpen] = useState(false); // 상담신청 완료 모달
@@ -143,10 +144,10 @@ const Main = () => {
           <div className='col col-md-6 mb-5 mb-md-0'>
             <div className={clsx(styles['fast-consulting'], 'bg-gray-100')}>
               <h3>빠른상담</h3>
-              <p>09:00 - 18:00 (월 - 토)</p>
+              <p>{companyInfo.officeHours}</p>
               <h2 className='mt-10'>
                 <a className='blue-100' href='tel:031-535-1324'>
-                  031) 535 - 1324
+                  {companyInfo.phone}
                 </a>
               </h2>
             </div>

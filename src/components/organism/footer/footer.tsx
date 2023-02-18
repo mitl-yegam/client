@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './footer.module.scss';
 import logoWoman from 'assets/images/logo/logo-woman-enterprise.png';
 import logoDisabled from 'assets/images/logo/logo-disabled-enterprise.png';
+import companyInfo from 'pages/main/company.json';
 
 const Footer = () => {
   return (
@@ -12,31 +13,37 @@ const Footer = () => {
           <div className='col col-md-8 col-lg-9'>
             <strong className='heading6'>(주) 예감</strong>
             <p className='my-4'>
-              <span className='mr-4'>대표자명: 이성희</span>
+              <span className='mr-4'>
+                대표자명: {companyInfo.representative}
+              </span>
               <br className='d-md-none' />
               <span>
                 전화번호:{' '}
-                <a className='white' href='tel:031-535-1324'>
-                  031 535 1324
+                <a
+                  className='white'
+                  href={`tel:${companyInfo.phone.replace(/[^\d]/g, '')}`}>
+                  {companyInfo.phone}
                 </a>
               </span>
               <br className='d-md-none' />
               <span className='d-none mx-4 d-md-inline'>|</span>
               <span className='d-none d-md-inline'>
                 이메일:
-                <a className='white' href='mailto:jkj1324@gmail.com'>
-                  jkj1324@gmail.com
+                <a className='white' href={`mailto:${companyInfo.email}`}>
+                  {companyInfo.email}
                 </a>
               </span>
               <span className='mx-4 d-none d-md-inline'>|</span>
               <span className={styles['nowrap']}>
-                주소: 경기도 포천시 자작로11
+                주소: {companyInfo.address}
               </span>
             </p>
             <p className='my-4'>
               <span>업무 시간</span>
               <br />
-              <strong className='heading6 mt-1'>월 - 토 09:00 - 18:00</strong>
+              <strong className='heading6 mt-1'>
+                {companyInfo.officeHours}
+              </strong>
             </p>
             <p className='mt-10'>Copyright ⓒ 주식회사 예감</p>
           </div>
