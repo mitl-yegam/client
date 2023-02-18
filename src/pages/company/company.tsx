@@ -75,7 +75,7 @@ const Company = () => {
                                 return (
                                     <div 
                                         key={shortid.generate()}
-                                        className={clsx(styles['logo-wrapper'], 'col-6 col-md-2')}
+                                        className={clsx(styles['logo-wrapper'], 'col-6 col-sm-4 col-md-2')}
                                     >
                                         <img src={clientImg[item.imgId]} alt={item.alt}/>    
                                     </div>
