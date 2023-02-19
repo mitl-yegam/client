@@ -3,9 +3,10 @@ import Button from 'components/atoms/button';
 import enterpriseStyles from '../enterprise/enterprise.module.scss';
 import styles from './order.module.scss';
 import clip from 'assets/images/icon/icon-clip.svg';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, FormEvent } from 'react';
 import { orderContent } from './data';
 import { Form } from './order.type';
+import { addAutoDashPhone } from 'utils';
 
 const Order = () => {
   const [form, setForm] = useState<Form>({
@@ -49,33 +50,14 @@ const Order = () => {
     target: { value, id },
   }: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     if (id === 'phone') {
-      value = value
-        .replace(/[^0-9]/g, '')
-        .replace(
-          /(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,
-          '$1-$2-$3',
-        )
-        .replace('--', '-');
+      value = addAutoDashPhone(value);
     }
     setForm((prevState) => ({ ...prevState, [id]: value }));
   };
 
   const onSubmit = useCallback(
-    (e: Event) => {
+    (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      if (!form.company) {
-        return alert('회사명을 입력해주세요.');
-      }
-      if (!form.name) {
-        return alert('성함을 입력해주세요.');
-      }
-      if (!form.phone) {
-        return alert('연락처를 입력해주세요.');
-      }
-      if (!form.email) {
-        return alert('이메일을 입력해주세요.');
-      }
-
       console.log('form', form);
     },
     [form],
@@ -94,7 +76,7 @@ const Order = () => {
         </div>
       </section>
       <section className={clsx(styles['root'], 'container py-0')}>
-        <form>
+        <form onSubmit={onSubmit}>
           <table className={clsx(styles['table'])}>
             <tbody>
               <tr>
@@ -107,6 +89,7 @@ const Order = () => {
                     value={form.company}
                     onChange={handleChange}
                     autoFocus
+                    required
                   />
                 </td>
               </tr>
@@ -119,6 +102,7 @@ const Order = () => {
                     id='name'
                     value={form.name}
                     onChange={handleChange}
+                    required
                   />
                 </td>
               </tr>
@@ -131,6 +115,7 @@ const Order = () => {
                     id='phone'
                     value={form.phone}
                     onChange={handleChange}
+                    required
                   />
                 </td>
               </tr>
@@ -143,6 +128,7 @@ const Order = () => {
                     id='email'
                     value={form.email}
                     onChange={handleChange}
+                    required
                   />
                 </td>
               </tr>
@@ -226,7 +212,7 @@ const Order = () => {
             </tbody>
           </table>
           <div className='d-center mt-12 mb-25'>
-            <Button text={'견적 문의하기'} onClick={onSubmit} />
+            <Button text={'견적 문의하기'} />
           </div>
         </form>
       </section>

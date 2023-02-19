@@ -24,6 +24,7 @@ import Button from 'components/atoms/button';
 import Modal from 'components/atoms/modal';
 import { useState, useCallback } from 'react';
 import companyInfo from './company.json';
+import { addAutoDashPhone } from 'utils';
 
 const Main = () => {
   const [open, setOpen] = useState(false); // 상담신청 완료 모달
@@ -84,13 +85,7 @@ const Main = () => {
     target: { value, id },
   }: React.ChangeEvent<HTMLInputElement>) => {
     if (id === 'phone') {
-      value = value
-        .replace(/[^0-9]/g, '')
-        .replace(
-          /(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,
-          '$1-$2-$3',
-        )
-        .replace('--', '-');
+      value = addAutoDashPhone(value);
     }
     setFastQuoteForm((prevState) => ({ ...prevState, [id]: value }));
   };
