@@ -1,5 +1,8 @@
 @use "../../assets/scss/abstracts/mixins/breakpoints";
 
+.description {
+    line-height: 1.8; // 단독 위의 닷 때문에 필요.
+}
 .dot-position {
     position:relative;
 }

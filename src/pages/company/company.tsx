@@ -11,6 +11,8 @@ import NewExample from "../../assets/images/etc/news-example.png";
 import TopTitle from "components/molecules/topTitle";
 import styles from "./company.module.scss";
 import companyData from "./company.json";
+import shortid from "shortid";
+import TopBlueBanner from "components/molecules/topBuleBanner";
 
 const clientImg:{[key:string]: string} = {
     logo1: LogoExample
@@ -28,11 +30,11 @@ const Company = () => {
             <section className="container py-0">
                 <TopTitle title="(주) 예감" borderBlue={false}/>
             </section>
-            <section className="container-fluid bg-blue-100 p-6 p-md-15">
+            <TopBlueBanner>
                 <div className="container white text-center">
                     <h1 className="bold1">전문적인 기술과 노하우로 책임 시공하는 <br/>종합 정보통신 공사업체</h1>
                 </div>
-            </section>
+            </TopBlueBanner>
             <section className="container">
                 <div className="d-center flex-column py-12">
                     <img src={IconRoundedCheck}/>
@@ -71,7 +73,10 @@ const Company = () => {
                         {
                             companyData.client.map(item => {
                                 return (
-                                    <div className={clsx(styles['logo-wrapper'], 'col-6 col-md-2')}>
+                                    <div 
+                                        key={shortid.generate()}
+                                        className={clsx(styles['logo-wrapper'], 'col-6 col-sm-4 col-md-2')}
+                                    >
                                         <img src={clientImg[item.imgId]} alt={item.alt}/>    
                                     </div>
                                 )
@@ -90,15 +95,18 @@ const Company = () => {
                         {
                             companyData.share.map(item => {
                                 return (
-                                    <div className="col col-md-6 col-lg-4 d-center flex-column">
-                                    <div className="pb-6">
-                                        <img src={shareImg[item.imgId]} width="100%" alt={item.alt} />
-                                        <p className="mt-5 bold3 white-pre-wrap">{item.title}</p>
-                                        <p className="white-pre-wrap">
-                                            {item.content}
-                                        </p>
+                                    <div 
+                                        key={shortid.generate()}
+                                        className="col col-md-6 col-lg-4 d-center flex-column"
+                                    >
+                                        <div className="pb-6">
+                                            <img src={shareImg[item.imgId]} width="100%" alt={item.alt} />
+                                            <p className="mt-5 bold3 white-pre-wrap">{item.title}</p>
+                                            <p className="white-pre-wrap">
+                                                {item.content}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
                                 )
                             })
                         }

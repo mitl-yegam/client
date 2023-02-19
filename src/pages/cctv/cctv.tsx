@@ -6,21 +6,20 @@ import Person1 from "assets/images/etc/person-1.png";
 import Person2 from "assets/images/etc/person-2.png";
 import Person3 from "assets/images/etc/person-3.png";
 import Person4 from "assets/images/etc/person-4.png";
+import TopBlueBanner from "components/molecules/topBuleBanner";
 
 const Cctv = () => {
 
   return (
     <>
-        <section className="container-fluid bg-blue-100 p-6 p-md-16">
-          <div className="container white text-center">
-            <h1 className="mb-5 mb-md-11">CCTV</h1>
-            <p className="mb-5 normal1">
+      <TopBlueBanner>
+          <h1 className="mb-5 mb-md-11">CCTV</h1>
+          <p className="mb-5 normal1">
             다양한 환경에 최적화 된 고화질 영상으로 <br/>언제 어디서나 실시간으로 확인할 수 있습니다.
-            </p>
-            <p className="normal2">신규설치 · 이전설치  · 추가설치 모두 가능합니다</p>
-          </div>
-        </section>
-        <section className={clsx('container-fluid', enterpriseStyles['banner-warpper'])}>
+          </p>
+          <p className="normal2">신규설치 · 이전설치  · 추가설치 모두 가능합니다</p>
+      </TopBlueBanner>
+      <section className={clsx('container-fluid', enterpriseStyles['banner-warpper'])}>
         <img src={BannerImage} width="100%"/>
       </section>
       <section className="py-5 py-md-12">

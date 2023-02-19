@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { navPath } from '../layout/data';
 import styles from './header.module.scss';
-import Logo from 'assets/images/logo/logo-yegam.svg';
+import Logo from 'assets/images/logo/logo-yegam.png';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
