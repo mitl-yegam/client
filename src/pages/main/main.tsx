@@ -22,7 +22,7 @@ import Ellipse from 'components/atoms/ellipse';
 import { Link } from 'react-router-dom';
 import Button from 'components/atoms/button';
 import Modal from 'components/atoms/modal';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, FormEvent } from 'react';
 import companyInfo from './company.json';
 import { addAutoDashPhone } from 'utils';
 
@@ -51,26 +51,22 @@ const Main = () => {
     }
   };
   // 개인정보수집 동의 여부
-  const handleTermsAgree = (isAgree: boolean) => {
-    setTermsAgree(isAgree);
-  };
+  const handleTermsAgree = useCallback(
+    (isAgree: boolean) => {
+      setTermsAgree(isAgree);
+
+      // 동의함 선택 & 개인정보수집 모달이 닫혀있으면 열기
+      if (isAgree && !termsOpen) {
+        setTermsOpen((prevState) => !prevState);
+      }
+    },
+    [termsOpen],
+  );
 
   // 상담신청
   const onSubmit = useCallback(
-    (e: Event) => {
+    (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      if (!fastQuoteForm.name) {
-        return alert('이름을 입력해주세요.');
-      }
-      if (!fastQuoteForm.phone) {
-        return alert('전화번호를 입력해주세요.');
-      }
-      if (!fastQuoteForm.address) {
-        return alert('주소를 입력해주세요.');
-      }
-      if (!fastQuoteForm.content) {
-        return alert('증상을 입력해주세요.');
-      }
       if (!termsAgree) {
         return alert('개인정보 수집 동의함을 선택해 주세요.');
       }
@@ -123,16 +119,16 @@ const Main = () => {
         </ul>
         <ul className={'row my-13 justify-center'}>
           <li className='col-xs-6 col-md-3 d-center'>
-            <Ellipse icon={magnetic} text={'합리적 가격'} size="medium"/>
+            <Ellipse icon={magnetic} text={'합리적 가격'} size='medium' />
           </li>
           <li className='col-xs-6 col-md-3 d-center'>
-            <Ellipse icon={thumbsUp} text={'최고급 자재'} size="medium"/>
+            <Ellipse icon={thumbsUp} text={'최고급 자재'} size='medium' />
           </li>
           <li className='col-xs-6 col-md-3 d-center'>
-            <Ellipse icon={tools} text={'무상 A/S'} size="medium"/>
+            <Ellipse icon={tools} text={'무상 A/S'} size='medium' />
           </li>
           <li className='col-xs-6 col-md-3 d-center'>
-            <Ellipse icon={verified} text={'양심기업'} size="medium"/>
+            <Ellipse icon={verified} text={'양심기업'} size='medium' />
           </li>
         </ul>
         <div className={clsx(styles['order-wrapper'], 'row', 'gx-1', 'gy-0')}>
@@ -188,7 +184,7 @@ const Main = () => {
                 </span>
               </div>
               <div className={styles['divider']} />
-              <form className={styles['form']} action=''>
+              <form className={styles['form']} onSubmit={onSubmit}>
                 <label className='heading6'>
                   <span>고객명</span>
                   <input
@@ -198,6 +194,7 @@ const Main = () => {
                     value={fastQuoteForm.name}
                     placeholder='이름을 입력해주세요'
                     onChange={handleChange}
+                    required
                   />
                 </label>
                 <label className='heading6'>
@@ -209,6 +206,7 @@ const Main = () => {
                     value={fastQuoteForm.phone}
                     placeholder='전화번호를 입력해주세요'
                     onChange={handleChange}
+                    required
                   />
                 </label>
                 <label className='heading6'>
@@ -220,6 +218,7 @@ const Main = () => {
                     value={fastQuoteForm.address}
                     placeholder='주소를 입력해주세요'
                     onChange={handleChange}
+                    required
                   />
                 </label>
                 <label className='heading6'>
@@ -231,10 +230,11 @@ const Main = () => {
                     value={fastQuoteForm.content}
                     placeholder='증상을 입력해주세요'
                     onChange={handleChange}
+                    required
                   />
                 </label>
                 <div className='d-center'>
-                  <Button text={'상담신청'} onClick={onSubmit} />
+                  <Button text={'상담신청'} />
                 </div>
               </form>
             </div>
@@ -383,6 +383,8 @@ const Main = () => {
                   border: '2px solid #d9d9d9',
                   width: '100%',
                   maxWidth: 296,
+                  paddingLeft: 0,
+                  paddingRight: 0,
                   marginBottom: 8,
                 }}
                 textStyle={{
@@ -396,6 +398,8 @@ const Main = () => {
                 style={{
                   width: '100%',
                   maxWidth: 296,
+                  paddingLeft: 0,
+                  paddingRight: 0,
                   marginBottom: 8,
                 }}
                 onClick={() => handleTermsModal(true)}
