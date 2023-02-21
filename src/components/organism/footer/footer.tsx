@@ -28,7 +28,7 @@ const Footer = () => {
               <br className='d-md-none' />
               <span className='d-none mx-4 d-md-inline'>|</span>
               <span className='d-none d-md-inline'>
-                이메일:
+                이메일:{' '}
                 <a className='white' href={`mailto:${companyInfo.email}`}>
                   {companyInfo.email}
                 </a>
