@@ -23,7 +23,29 @@ const Order = () => {
     const { files } = e.target;
 
     if (files && files?.length > 0) {
-      setForm((prevState) => ({ ...prevState, files }));
+      setForm((prevState) => {
+        let _files = prevState.files;
+
+        if (_files?.length) {
+          const attachFiles = Array.from(_files);
+          const prevKeys = Object.keys({ ..._files });
+          const lastKey = Number(prevKeys[prevKeys.length - 1]);
+          let newKey = 1;
+
+          for (let i = 0; i < files.length; i++) {
+            const uniqueKey = lastKey + newKey + i;
+            attachFiles[uniqueKey] = files[i];
+          }
+          _files = attachFiles;
+        } else {
+          _files = files;
+        }
+
+        return {
+          ...prevState,
+          files: _files,
+        };
+      });
     }
   };
 
