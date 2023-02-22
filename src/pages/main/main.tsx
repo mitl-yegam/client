@@ -6,6 +6,7 @@ import mainExample4 from 'assets/images/etc/main-example-4.png';
 import mainExample5 from 'assets/images/etc/main-example-5.png';
 import mainExample6 from 'assets/images/etc/main-example-6.png';
 import bestReason1 from 'assets/images/etc/main-best-reason-1.png';
+import bestReason2 from 'assets/images/etc/main-best-reason-2.png';
 import bestReason3 from 'assets/images/etc/main-best-reason-3.png';
 import mainCase1 from 'assets/images/etc/main-case-1.png';
 import mainCase2 from 'assets/images/etc/main-case-2.png';
@@ -265,7 +266,7 @@ const Main = () => {
           </li>
           <li
             className={clsx(styles[''], 'col col-md-4')}
-            style={{ backgroundImage: `url(${bestReason1})` }}>
+            style={{ backgroundImage: `url(${bestReason2})` }}>
             <div className={styles['reason-content']}>
               <div className={styles['number']}>2</div>
               <h3 className='mt-3 mb-10'>
