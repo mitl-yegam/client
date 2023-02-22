@@ -21,7 +21,8 @@
 
       td {
         padding: 15px 24px;
-        input {
+        input[type='text'],
+        input[type='email'] {
           padding: 7px 21px;
           width: -webkit-fill-available;
           max-width: 447px;

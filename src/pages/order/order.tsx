@@ -9,6 +9,7 @@ import { Form } from './order.type';
 import { addAutoDashPhone } from 'utils';
 
 const Order = () => {
+  const [termsAgree, setTermsAgree] = useState(false); // 개인정보 수집 동의 여부
   const [form, setForm] = useState<Form>({
     company: '',
     name: '',
@@ -80,10 +81,17 @@ const Order = () => {
   const onSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
+      if (!termsAgree) {
+        return alert('개인정보 수집 동의함을 선택해 주세요.');
+      }
       console.log('form', form);
     },
-    [form],
+    [form, termsAgree],
   );
+  // 개인정보수집 동의 여부
+  const handleTermsAgree = (isAgree: boolean) => {
+    setTermsAgree(isAgree);
+  };
 
   return (
     <>
@@ -197,6 +205,26 @@ const Order = () => {
               <tr>
                 <th>개인정보수집</th>
                 <td className='pb-0'>
+                  <div className='mb-4'>
+                    <label className='mr-2'>
+                      <input
+                        type='radio'
+                        name='terms'
+                        onChange={() => handleTermsAgree(true)}
+                        checked={termsAgree}
+                      />
+                      <span className='ml-md-3 blue-100'>동의함</span>
+                    </label>
+                    <label>
+                      <input
+                        type='radio'
+                        name='terms'
+                        onChange={() => handleTermsAgree(false)}
+                        checked={!termsAgree}
+                      />
+                      <span className='ml-md-3 blue-100'>동의안함</span>
+                    </label>
+                  </div>
                   <div className={styles['terms']}>
                     <p>
                       <span className={styles['title']}>
