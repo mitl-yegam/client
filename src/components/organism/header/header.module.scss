@@ -11,6 +11,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1;
 
   @include breakpointsMixin.media-breakpoint-up(md) {
     & {
@@ -112,6 +113,7 @@
   background-color: map-get(colors.$color-map, 'white');
   width: 100%;
   height: 0;
+  font-size: 18px;
 
   & li {
     border-top: 1px solid map-get(colors.$color-map, gray-100);
@@ -129,7 +131,7 @@
     color: map-get(colors.$color-map, blue-100);
   }
   &.active {
-    height: 287px;
+    height: 308px;
   }
 
   @include breakpointsMixin.media-breakpoint-up(md) {

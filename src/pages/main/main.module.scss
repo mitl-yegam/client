@@ -2,6 +2,19 @@
 @use '../../assets/scss/helper/layout';
 @use '../../assets/scss/abstracts/mixins/breakpoints' as breakpointsMixin;
 .root {
+  .dot-position {
+    position:relative;
+  }
+  .dot {
+      position: absolute;
+      top: -24px;
+      left: 5px;
+
+      @include breakpointsMixin.media-breakpoint-up(md) {
+          top: -39px;
+          left: 9px;
+      }
+  }
   .ul-wrapper {
     display: flex;
     flex-direction: row;
@@ -24,24 +37,38 @@
   }
 
   .order-wrapper {
-    margin-bottom: 109px;
+    margin-bottom: 50px;
     color: map-get(colors.$color-map, blue-100);
 
+    @include breakpointsMixin.media-breakpoint-up(md) {
+      margin-bottom: 109px;
+    }
+
     .fast-consulting {
-      height: 253px;
+      height: 190px;
       margin-bottom: 21px;
       border-radius: 10px;
-      padding: 40px 34px;
+      padding: 24px;
+
+      @include breakpointsMixin.media-breakpoint-up(md) {
+        height: 253px;
+        padding: 40px 34px;
+      }
     }
     .quote-contact {
+      height: 190px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 253px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
       color: map-get(colors.$color-map, 'white');
-      padding: 40px 34px;
+
+      @include breakpointsMixin.media-breakpoint-up(md) {
+        height: 253px;
+        padding: 40px 34px;
+      }
     }
     .fast-quote-contact {
       background: map-get(colors.$color-map, 'white');
@@ -51,10 +78,28 @@
       height: 100%;
       padding: 34px 40px;
 
+      @include breakpointsMixin.media-breakpoint-up(md) {
+        & > div:first-child {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 36px;
+        }
+      }
+
       & .terms-wrapper {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        
         margin-bottom: 20px;
+
+        @include breakpointsMixin.media-breakpoint-up(md) {
+          & {
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+        }
 
         & label {
           text-align: center;
@@ -115,7 +160,11 @@
   .best-reason-wrapper {
     align-items: center;
     justify-content: center;
-    margin-bottom: 110px;
+    margin-bottom: 50px;
+
+    @include breakpointsMixin.media-breakpoint-up(md) {
+      margin-bottom: 110px;
+    }
 
     & li {
       display: flex;
@@ -123,10 +172,13 @@
       align-items: center;
       justify-content: flex-start;
       width: 100%;
-      height: 417px;
       max-width: 427px;
       color: map-get(colors.$color-map, 'white');
       text-align: center;
+
+      @include breakpointsMixin.media-breakpoint-up(md) { 
+        height: 417px;
+      }
 
       & .number {
         width: 24px;

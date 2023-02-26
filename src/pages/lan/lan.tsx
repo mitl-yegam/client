@@ -49,16 +49,16 @@ const Lan = () => {
             <p className="heading4 text-center mt-2">자리 재배치</p>
           </div>
         </div>
-        <p className="normal2 text-center my-20">
-        신규  사무실 오픈, 사무실 이전 및 확장, 자리배치 재정비에 있어서<br/>
-        내부 네트워크 환경구축을 위해 랜공사가 꼭 필요합니다.
+        <p className="normal2 text-center my-10 my-md-20">
+        신규  사무실 오픈, 사무실 이전 및 확장, 자리배치 재정비 등에 있어<br/>
+        '내부 네트워크 환경구축'을 위해 [랜공사]가 꼭! 필요합니다.
         <br/><br/>
-        이 서비스는 통신사가 아닌, 랜공사 전문기업에서 진행하게 됩니다.
+        이 서비스는 통신사가 아닌, <br className="d-md-none"/>[랜공사 전문기업]에서 진행하게 됩니다.
         </p>
       </section>
       <section className="container-fluid bg-gray-100">
-        <div className="container text-center py-18">
-        <h2 className="blue-100">초고속 네트워크 시스템 구축 · 컨설팅, <br/>그리고 완벽한 A/S 유지보수 까지</h2>
+        <div className="container text-center py-10 py-md-18">
+        <h2 className={clsx(styles['fast-network-title'], "blue-100")}>초고속 네트워크 시스템 구축 · 컨설팅, <br/>그리고 완벽한 A/S 유지보수 까지</h2>
           <p className="normal2 mt-10">
             예감은 숙련된 기술로<br/>
             고객님의 환경을 다각적으로 분석하고,<br/>

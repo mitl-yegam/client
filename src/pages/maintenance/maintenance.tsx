@@ -93,7 +93,7 @@ const Maintenance = () => {
           <div className={lanStyles['process-wrapper']}>
             <div className={lanStyles['process']}>
               <Ellipse icon={IconRoundedCheckWhite} size="small"/>
-              <p className="heading6 blue-100 text-center mb-1">장애처리</p>
+              <p className="heading6 blue-100 text-center mt-4 mb-1">장애처리</p>
               <ul>
                 <li className="normal4 gray-600 text-center">
                   불편사항 해결

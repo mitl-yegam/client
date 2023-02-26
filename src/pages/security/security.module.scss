@@ -1,26 +1,27 @@
 @use "../../assets/scss/abstracts/mixins/breakpoints";
 
-.description {
-    line-height: 1.8; // 단독 위의 닷 때문에 필요.
-}
 .dot-position {
     position:relative;
 }
 
 .dot {
     position: absolute;
-    top: -36px;
-    left: 12px;
+    top: -22px;
+    left: 5px;
 
     @include breakpoints.media-breakpoint-up(md) {
-        top: -45px;
-        left: 14px;
+        top: -39px;
+        left: 12px;
     }
 }
 
 .card-wrapper {
     background-color: white;
-    padding: 68px 37px;
+    padding: 36px 37px;
     border-radius: 8px;
     height: 100%;
+
+    @include breakpoints.media-breakpoint-up(md) {
+        padding: 68px 37px;
+    }
 }

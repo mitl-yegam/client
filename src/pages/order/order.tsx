@@ -163,7 +163,7 @@ const Order = () => {
                 </td>
               </tr>
               <tr>
-                <th>문의내용</th>
+                <th>문의<br className='d-md-none'/>내용</th>
                 <td>
                   <textarea
                     id='content'
@@ -173,7 +173,7 @@ const Order = () => {
                 </td>
               </tr>
               <tr>
-                <th>첨부파일</th>
+                <th>첨부<br className='d-md-none'/>파일</th>
                 <td>
                   <div className={styles['filebox']}>
                     <label htmlFor='file'>
@@ -203,7 +203,7 @@ const Order = () => {
                 </td>
               </tr>
               <tr>
-                <th>개인정보수집</th>
+                <th>개인정보<br className='d-md-none'/>수집</th>
                 <td className='pb-0'>
                   <div className='mb-4'>
                     <label className='mr-2'>

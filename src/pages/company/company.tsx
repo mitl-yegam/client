@@ -57,32 +57,32 @@ const Company = () => {
             구축합니다.
           </p>
         </div>
-        <div className='d-flex justify-between flex-nowrap'>
-          <div>
+        <div className='row d-center'>
+          <div className='col-6 col-sm-4 col-md-2'>
             <img
               src={Certification1}
               width='100%'
               alt='장애인기업확인서 이미지'
             />
           </div>
-          <div>
+          <div className='col-6 col-sm-4 col-md-2'>
             <img src={Certification2} width='100%' alt='사업자등록증 이미지' />
           </div>
-          <div>
+          <div className='col-6 col-sm-4 col-md-2'>
             <img
               src={Certification3}
               width='100%'
               alt='정보통신공사업등록증 이미지'
             />
           </div>
-          <div>
+          <div className='col-6 col-sm-4 col-md-2'>
             <img
               src={Certification4}
               width='100%'
               alt='여성기업확인서 이미지'
             />
           </div>
-          <div>
+          <div className='col-6 col-sm-4 col-md-2'>
             <img
               src={Certification5}
               width='100%'

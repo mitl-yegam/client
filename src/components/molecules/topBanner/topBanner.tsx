@@ -11,10 +11,10 @@ const TopBanner = () => {
       className={clsx(styles['root'], 'container-fluid', 'd-center')}
       style={{ backgroundImage: `url(${BannerTop})` }}>
       <div className='container d-center flex-column'>
-        <div className='row bold1 white mb-11'>
+        <div className='row bold1 white mb-5 mb-md-11'>
           <p className='bold1 text-center'>
-            전문적인 기술과 노하우로 책임 시공하는{' '}
-            <span className='heading1'>(주)예감</span>
+            전문적인 기술과 노하우로 <br className='d-md-none' /> 책임 시공하는{' '}
+            <span className='text-bolder'>(주)예감</span>
           </p>
         </div>
         <ShadowBox>

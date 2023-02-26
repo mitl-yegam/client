@@ -1,8 +1,8 @@
-import { JSXElementConstructor, ReactElement, ReactFragment, ReactNode, ReactPortal } from "react";
+import { ReactNode } from "react";
 
 const TopBlueBanner = ({children}: {children: ReactNode}) => {
     return (
-        <section className="container-fluid bg-blue-100 p-6 p-md-16">
+        <section className="container-fluid bg-blue-100 py-3 py-md-9">
         <div className="container white text-center">
          {children}
         </div>

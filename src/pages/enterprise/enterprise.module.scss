@@ -24,9 +24,9 @@
 }
 
 .round-wrapper {
+    border-radius: 10px;
+    height: 110px;
     width: 293px;
-    height: 293px;
-    border-radius: 50%;
     background-color: map-get(colors.$color-map, gray-100);
     display: flex;
     justify-content: center;
@@ -36,6 +36,11 @@
     text-align: center;
     padding: 16px;
     margin: 0 auto;
+
+    @include breakpoints.media-breakpoint-up(md) {
+        height: 293px;
+        border-radius: 50%;
+    }
 
     & img {
         width: 80px;

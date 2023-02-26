@@ -16,7 +16,7 @@ const Button = ({
       style={style}
       onClick={onClick}>
       {!!text && (
-        <span className={clsx('heading3', color)} style={textStyle}>
+        <span className={clsx('heading6', color)} style={textStyle}>
           {text}
         </span>
       )}

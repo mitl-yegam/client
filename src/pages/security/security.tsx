@@ -26,11 +26,11 @@ const Security = () => {
     </section>
     <TopBlueBanner>
       <h1 className="mb-5 mb-md-11">전용회선 가입</h1>
-      <p className={clsx(styles['description'], 'mb-5 normal1')}>
+      <p className={'mb-5 normal1'}>
       완벽한 보안성능을 갖춘 24시간 <span className={styles['dot-position']}>단<span className={styles['dot']}>.</span></span><span className={styles['dot-position']}>독<span className={styles['dot']}>.</span></span>회선 <br/>
       원거리 두 지점을 하나의 LAN 구간처럼 음성·데이터를 전송할 수 있도록 연결해 줍니다.
       </p>
-      <p className="normal1">빠른 전송과 보안이 필요한 기업 · 공공기관 · 금융기관에 추천드립니다.</p>
+      <p className="normal1">빠른 전송과 보안이 필요한<br className="d-md-none"/> 기업 · 공공기관 · 금융기관에 추천드립니다.</p>
     </TopBlueBanner>
     <section className={clsx('container-fluid', enterpriseStyles['banner-warpper'])}>
       <img src={BannerImage} width="100%"/>
@@ -40,33 +40,33 @@ const Security = () => {
         <div className="row flex-between">
           <div className="col col-sm-6 col-lg-3">
             <div className={enterpriseStyles['round-wrapper']}>
-              <img src={IconProtect} className="mb-3"/>
+              <img src={IconProtect} className="mb-3 d-none d-md-block"/>
               <p className="heading6 blue-100">탁월한 <br/>보안과 안전</p>
             </div>
           </div>
           <div className="col col-sm-6 col-lg-3">
             <div className={clsx(enterpriseStyles['round-wrapper'], enterpriseStyles['round-blue'])}>
-              <img src={IconScorecard} className="mb-3"/>
+              <img src={IconScorecard} className="mb-3 d-none d-md-block"/>
               <p className="heading6 white">상담부터 가입,<br/>설치, 유지보수까지</p>
             </div>
           </div>
           <div className="col col-sm-6 col-lg-3">
             <div className={enterpriseStyles['round-wrapper']}>
-              <img src={IconGuarantee} className="mb-3"/>
+              <img src={IconGuarantee} className="mb-3 d-none d-md-block"/>
               <p className="heading6 blue-100">100% 광케이블로<br/>고품질의 서비스 제공</p>
             </div>
           </div>
           <div className="col col-sm-6 col-lg-3">
             <div className={clsx(enterpriseStyles['round-wrapper'], enterpriseStyles['round-blue'])}>
-              <img src={IconTools} className="mb-3"/>
+              <img src={IconTools} className="mb-3 d-none d-md-block"/>
               <p className="heading6 white">불편 접수시 빠른 조치 가능</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section className="container-fluid bg-gray-100 py-25">
-      <h2 className="blue-100 text-center mb-12">왜<img src={KtLogo}/>인가요?</h2>
+    <section className="container-fluid bg-gray-100 py-15 py-md-25">
+      <h2 className="blue-100 text-center mb-0 mb-md-12">왜<img src={KtLogo}/>인가요?</h2>
       <div className="container">
         <div className="row gx-1">
           <div className="col col-md-6">
