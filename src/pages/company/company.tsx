@@ -33,7 +33,8 @@ const Company = () => {
       <TopBlueBanner>
         <div className='container white text-center'>
           <h1 className='bold1'>
-            전문적인 기술과 노하우로 책임 시공하는 <br />
+            전문적인 기술과 노하우로 <br className='d-md-none' />
+            책임 시공하는 <br />
             종합 정보통신 공사업체
           </h1>
         </div>
@@ -42,19 +43,22 @@ const Company = () => {
         <div className='d-center flex-column py-12'>
           <img src={IconRoundedCheck} />
           <h2 className='blue-100 mt-3 mb-12 text-center'>
-            정보통신공사 면허를 가진 기업인지 꼭 확인하세요!
+            정보통신공사 면허를 가진 기업인지 <br className='d-md-none' />꼭
+            확인하세요!
           </h2>
           <div>
             <img src={LogoKica} width='100%' />
           </div>
           <p className='bold3 text-center mt-12'>
-            예감은 정보통신공사협회에 등록된 정보통신공사 면허를 가진 전문
-            기업입니다.
+            예감은 정보통신공사협회에 등록된 <br className='d-md-none' />{' '}
+            정보통신공사 면허를 가진
+            <br className='d-md-none' /> 전문 기업입니다.
             <br />
-            오랜 경험을 바탕으로 항상 고객의 입장에서 생각하고,
+            오랜 경험을 바탕으로 <br className='d-md-none' />
+            항상 고객의 입장에서 생각하고,
             <br />
-            고객의 환경에 맞추어 저렴한 가격으로 최상의 네트워크 환경을
-            구축합니다.
+            고객의 환경에 맞추어 저렴한 가격으로 <br className='d-md-none' />{' '}
+            최상의 네트워크 환경을 구축합니다.
           </p>
         </div>
         <div className='row d-center'>

@@ -92,7 +92,8 @@ const Main = () => {
       <TopBanner />
       <div className='container'>
         <h2 className='bold2 text-center my-10 my-md-12'>
-          내부 유·무선 인터넷 환경이 필요한 모든 곳에 <br className='d-none d-md-block'/>
+          내부 유·무선 인터넷 환경이 필요한 모든 곳에{' '}
+          <br className='d-none d-md-block' />
           <span className='blue-100 text-bolder'>
             정확하고 신속하게 시공하는 랜공사 전문 기업
           </span>{' '}
@@ -155,8 +156,10 @@ const Main = () => {
           <div className='col col-md-6'>
             <div className={clsx(styles['fast-quote-contact'])}>
               <div className='mb-2'>
-                <h3>증상 문의</h3>
-                <p className='heading6 text-normal'>확인 후 순차적으로 연락드립니다.</p>
+                <h3>빠른견적문의</h3>
+                <p className='heading6 text-normal'>
+                  확인 후 순차적으로 연락드립니다.
+                </p>
               </div>
               <div className={clsx(styles['terms-wrapper'])}>
                 <p className='mr-6'>개인정보수집 이용에 관한 동의</p>
@@ -244,20 +247,19 @@ const Main = () => {
           </div>
         </div>
         <div className='row d-center mb-8 mb-md-15'>
-          <h2 className='blue-100 text-center'>왜 예감의 고객만족도는 <br className='d-md-none'/>
-          <span className={styles['dot-position']}>
-            최
-            <span className={styles['dot']}>.</span>
-          </span>
-          <span className={styles['dot-position']}>
-            상
-            <span className={styles['dot']}>.</span>
-          </span>
-          <span className={styles['dot-position']}>
-            위
-            <span className={styles['dot']}>.</span>
-          </span>
-          인가요?</h2>
+          <h2 className='blue-100 text-center'>
+            왜 예감의 고객만족도는 <br className='d-md-none' />
+            <span className={styles['dot-position']}>
+              최<span className={styles['dot']}>.</span>
+            </span>
+            <span className={styles['dot-position']}>
+              상<span className={styles['dot']}>.</span>
+            </span>
+            <span className={styles['dot-position']}>
+              위<span className={styles['dot']}>.</span>
+            </span>
+            인가요?
+          </h2>
         </div>
         <ul className={clsx(styles['best-reason-wrapper'], 'row', 'gy-3')}>
           <li
