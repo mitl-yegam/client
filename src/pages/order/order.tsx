@@ -45,7 +45,7 @@ const Order = () => {
 
         return {
           ...prevState,
-          fileList: Array.from(_files),
+          fileList: _files,
         };
       });
     }
@@ -65,7 +65,7 @@ const Order = () => {
 
         setForm((prevState) => ({
           ...prevState,
-          fileList: Array.from(dataTranster.files),
+          fileList: dataTranster.files,
         }));
       }
     },
@@ -98,12 +98,15 @@ const Order = () => {
       formData.append('requirement', form.requirement);
 
       if (form.fileList?.length) {
-        const fileList = [];
+        // const fileList = [];
         for (let i = 0; i < form.fileList.length; i++) {
-          fileList.push(form.fileList[i]);
+          // fileList.push(form.fileList[i]);
+          formData.append(`fileList`, form.fileList[i]);
         }
 
-        formData.append(`fileList`, JSON.stringify(fileList));
+        // formData.append(`fileList`, form.fileList[0]);
+
+        console.log(formData.getAll('fileList'));
       }
 
       // {
@@ -115,6 +118,7 @@ const Order = () => {
       //     requirement: '아래 파일에 대한 견적서 요청드려요.',
       //     fileUrlList: 'asd',
       //   },
+      console.log('form', formData);
       const dispatch = {
         url: '/estimate',
         data: formData,
