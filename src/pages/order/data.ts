@@ -1,4 +1,4 @@
-export const orderContent = `하단 내용을 자세히 기록해 주시면 견적 시 도움이 됩니다.
+export const orderRequirement = `하단 내용을 자세히 기록해 주시면 견적 시 도움이 됩니다.
 
 
 

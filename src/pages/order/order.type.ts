@@ -1,8 +1,8 @@
 export type Form = {
-  company: string;
+  companyName: string;
   name: string;
   phone: string;
   email: string;
-  content: string;
+  requirement: string;
   files: FileList | null | File[];
 };

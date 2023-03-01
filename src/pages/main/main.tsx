@@ -35,7 +35,7 @@ const Main = () => {
     name: '',
     phone: '',
     address: '',
-    content: '',
+    requirement: '',
   }); // 빠른견적 문의 Form
 
   // 상담신청 완료 modal handler
@@ -232,8 +232,8 @@ const Main = () => {
                   <input
                     type='text'
                     className='heading6'
-                    id='content'
-                    value={fastQuoteForm.content}
+                    id='requirement'
+                    value={fastQuoteForm.requirement}
                     placeholder='요청사항을 입력해주세요'
                     onChange={handleChange}
                     required

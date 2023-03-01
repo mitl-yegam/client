@@ -4,18 +4,19 @@ import enterpriseStyles from '../enterprise/enterprise.module.scss';
 import styles from './order.module.scss';
 import clip from 'assets/images/icon/icon-clip.svg';
 import { useState, useCallback, FormEvent } from 'react';
-import { orderContent } from './data';
+import { orderRequirement } from './data';
 import { Form } from './order.type';
 import { addAutoDashPhone } from 'utils';
+import API from 'api';
 
 const Order = () => {
   const [termsAgree, setTermsAgree] = useState(false); // 개인정보 수집 동의 여부
   const [form, setForm] = useState<Form>({
-    company: '',
+    companyName: '',
     name: '',
     phone: '',
     email: '',
-    content: orderContent,
+    requirement: orderRequirement,
     files: null,
   });
 
@@ -44,7 +45,7 @@ const Order = () => {
 
         return {
           ...prevState,
-          files: _files,
+          files: Array.from(_files),
         };
       });
     }
@@ -62,7 +63,10 @@ const Order = () => {
             dataTranster.items.add(file);
           });
 
-        setForm((prevState) => ({ ...prevState, files: dataTranster.files }));
+        setForm((prevState) => ({
+          ...prevState,
+          files: Array.from(dataTranster.files),
+        }));
       }
     },
     [form],
@@ -78,13 +82,33 @@ const Order = () => {
     setForm((prevState) => ({ ...prevState, [id]: value }));
   };
 
+  // 견적문의 submit handler
   const onSubmit = useCallback(
-    (e: FormEvent<HTMLFormElement>) => {
+    async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
+
       if (!termsAgree) {
         return alert('개인정보 수집 동의함을 선택해 주세요.');
       }
-      console.log('form', form);
+      const formData = new FormData();
+      formData.append('companyName', form.companyName);
+      formData.append('name', form.name);
+      formData.append('phone', form.phone);
+      formData.append('email', form.email);
+      formData.append('requirement', form.requirement);
+
+      if (form.files?.length) {
+        for (let i = 0; i < form.files.length; i++) {
+          formData.append(`file${i}`, form.files[i]);
+        }
+      }
+
+      const request = {
+        url: '/estimate',
+        data: formData,
+      };
+
+      await API.post(request);
     },
     [form, termsAgree],
   );
@@ -106,7 +130,7 @@ const Order = () => {
         </div>
       </section>
       <section className={clsx(styles['root'], 'container py-0')}>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} encType='multipart/form-data'>
           <table className={clsx(styles['table'])}>
             <tbody>
               <tr>
@@ -115,8 +139,8 @@ const Order = () => {
                   <input
                     type='text'
                     placeholder='*회사명'
-                    id='company'
-                    value={form.company}
+                    id='companyName'
+                    value={form.companyName}
                     onChange={handleChange}
                     autoFocus
                     required
@@ -163,17 +187,25 @@ const Order = () => {
                 </td>
               </tr>
               <tr>
-                <th>문의<br className='d-md-none'/>내용</th>
+                <th>
+                  문의
+                  <br className='d-md-none' />
+                  내용
+                </th>
                 <td>
                   <textarea
-                    id='content'
-                    value={form.content}
+                    id='requirement'
+                    value={form.requirement}
                     onChange={handleChange}
                   />
                 </td>
               </tr>
               <tr>
-                <th>첨부<br className='d-md-none'/>파일</th>
+                <th>
+                  첨부
+                  <br className='d-md-none' />
+                  파일
+                </th>
                 <td>
                   <div className={styles['filebox']}>
                     <label htmlFor='file'>
@@ -203,7 +235,11 @@ const Order = () => {
                 </td>
               </tr>
               <tr>
-                <th>개인정보<br className='d-md-none'/>수집</th>
+                <th>
+                  개인정보
+                  <br className='d-md-none' />
+                  수집
+                </th>
                 <td className='pb-0'>
                   <div className='mb-4'>
                     <label className='mr-2'>
