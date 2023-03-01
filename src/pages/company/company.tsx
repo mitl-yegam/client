@@ -7,24 +7,32 @@ import Certification5 from '../../assets/images/etc/certification-5.png';
 import LogoKica from '../../assets/images/logo/logo-kica.png';
 import IconRoundedCheck from '../../assets/images/icon/icon-rounded-check.svg';
 import LogoExample from '../../assets/images/logo/logo-example.png';
-import NewExample from '../../assets/images/etc/news-example.png';
-import NewExample2 from '../../assets/images/etc/news-example2.png';
 import TopTitle from 'components/molecules/topTitle';
 import styles from './company.module.scss';
 import companyData from './company.json';
 import shortid from 'shortid';
 import TopBlueBanner from 'components/molecules/topBuleBanner';
+import { useEffect, useState } from 'react';
+import API from 'api';
 
 const clientImg: { [key: string]: string } = {
   logo1: LogoExample,
 };
 
-const shareImg: { [key: string]: string } = {
-  example1: NewExample,
-  example2: NewExample2,
-};
-
 const Company = () => {
+  const [sharingList, setSharingList] = useState<{[key: string]: any}[]>([]);
+
+  useEffect(() => {
+    const data = {
+      pageName: 'introduction',
+      pageDetailName: 'sharing'
+    }
+    API.get({url: '/media', data})
+    .then(({data}) => {
+      setSharingList(data);
+    })
+  }, []);
+
   return (
     <>
       <section className='container py-0'>
@@ -122,19 +130,19 @@ const Company = () => {
         </div>
         <div className='container mt-3 mt-md-12'>
           <div className='row'>
-            {companyData.share.map((item) => {
+            {sharingList.map((item) => {
               return (
                 <div
                   key={shortid.generate()}
                   className='col col-md-6 col-lg-4 d-center flex-column'>
                   <div className='pb-6'>
                     <img
-                      src={shareImg[item.imgId]}
+                      src={item.url}
                       width='100%'
-                      alt={item.alt}
+                      alt={item.title}
                     />
                     <p className='mt-5 bold3 white-pre-wrap'>{item.title}</p>
-                    <p className='white-pre-wrap'>{item.content}</p>
+                    <p className='white-pre-wrap'>{item.subTitle}</p>
                   </div>
                 </div>
               );

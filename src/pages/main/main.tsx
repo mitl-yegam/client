@@ -8,10 +8,6 @@ import mainExample6 from 'assets/images/etc/main-example-6.png';
 import bestReason1 from 'assets/images/etc/main-best-reason-1.png';
 import bestReason2 from 'assets/images/etc/main-best-reason-2.png';
 import bestReason3 from 'assets/images/etc/main-best-reason-3.png';
-import mainCase1 from 'assets/images/etc/main-case-1.png';
-import mainCase2 from 'assets/images/etc/main-case-2.png';
-import mainCase3 from 'assets/images/etc/main-case-3.png';
-import mainCase4 from 'assets/images/etc/main-case-4.png';
 import magnetic from 'assets/images/icon/icon-magnetic-card.png';
 import thumbsUp from 'assets/images/icon/icon-thumbs-up.png';
 import tools from 'assets/images/icon/icon-tools.png';
@@ -23,9 +19,11 @@ import Ellipse from 'components/atoms/ellipse';
 import { Link } from 'react-router-dom';
 import Button from 'components/atoms/button';
 import Modal from 'components/atoms/modal';
-import { useState, useCallback, FormEvent } from 'react';
+import { useState, useCallback, FormEvent, useEffect } from 'react';
 import companyInfo from './company.json';
 import { addAutoDashPhone } from 'utils';
+import API from 'api';
+import shortid from 'shortid';
 
 const Main = () => {
   const [open, setOpen] = useState(false); // 상담신청 완료 모달
@@ -37,6 +35,7 @@ const Main = () => {
     email: '',
     requirement: '',
   }); // 빠른견적 문의 Form
+  const [siteList, setSiteList] = useState<{[key:string]:any}[]>([]);
 
   // 상담신청 완료 modal handler
   const handleModal = () => {
@@ -92,6 +91,17 @@ const Main = () => {
     }
     setFastQuoteForm((prevState) => ({ ...prevState, [id]: value }));
   };
+
+  useEffect(() => {
+    const data = {
+      pageName: 'home',
+      pageDetailName: 'site'
+    }
+    API.get({url: '/media', data})
+    .then(({data}) => {
+      setSiteList(data);
+    })
+  }, []);
 
   return (
     <div className={styles['root']}>
@@ -335,18 +345,15 @@ const Main = () => {
           </div>
           <div className='col'>
             <ul className={clsx(styles['case-wrapper'], 'row', 'gx-1')}>
-              <li className='col-6 col-md-3'>
-                <img src={mainCase1} alt='설치사례' />
-              </li>
-              <li className='col-6 col-md-3'>
-                <img src={mainCase2} alt='설치사례' />
-              </li>
-              <li className='col-6 col-md-3'>
-                <img src={mainCase3} alt='설치사례' />
-              </li>
-              <li className='col-6 col-md-3'>
-                <img src={mainCase4} alt='설치사례' />
-              </li>
+              {
+                siteList.map(item => {
+                  return (
+                    <li className='col-6 col-md-3' key={shortid.generate()}>
+                      <img src={item.url} alt={item.title} />
+                    </li>
+                  )
+                })
+              }
             </ul>
           </div>
         </div>
