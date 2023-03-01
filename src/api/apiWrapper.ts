@@ -16,11 +16,9 @@ const defaultConfig = {
 
 const baseUrl = process.env.REACT_APP_API_URL;
 
-console.log(process.env);
-
 const API = {
   async get({ url, data, config = defaultConfig }: HttpProp) {
-    let _url = `${baseUrl}${url};`;
+    let _url = `${baseUrl}${url}`;
 
     if (data) {
       _url = `${_url}?${queryString.stringify(data)}`;
@@ -30,7 +28,7 @@ const API = {
   },
   async post({ url, data, config = defaultConfig }: HttpProp) {
     console.log(process.env.REACT_APP_API_URL);
-    let _url = `${baseUrl}${url};`;
+    let _url = `${baseUrl}${url}`;
     const _config = {
       ...defaultConfig,
       ...config,

@@ -4,5 +4,5 @@ export type Form = {
   phone: string;
   email: string;
   requirement: string;
-  files: FileList | null | File[];
+  fileList: FileList | null | File[];
 };

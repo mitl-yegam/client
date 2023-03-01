@@ -34,7 +34,7 @@ const Main = () => {
   const [fastQuoteForm, setFastQuoteForm] = useState({
     name: '',
     phone: '',
-    address: '',
+    email: '',
     requirement: '',
   }); // 빠른견적 문의 Form
 
@@ -71,6 +71,12 @@ const Main = () => {
       if (!termsAgree) {
         return alert('개인정보 수집 동의함을 선택해 주세요.');
       }
+
+      const formData = new FormData();
+      formData.append('name', fastQuoteForm.name);
+      formData.append('phone', fastQuoteForm.phone);
+      formData.append('email', fastQuoteForm.email);
+      formData.append('requirement', fastQuoteForm.requirement);
       console.log('fastQuoteForm', fastQuoteForm);
       handleModal();
     },
@@ -216,13 +222,13 @@ const Main = () => {
                   />
                 </label>
                 <label className='heading6'>
-                  <span>주&nbsp;&nbsp;&nbsp;소</span>
+                  <span>이메일</span>
                   <input
-                    type='text'
+                    type='email'
                     className='heading6'
-                    id='address'
-                    value={fastQuoteForm.address}
-                    placeholder='주소를 입력해주세요'
+                    id='email'
+                    value={fastQuoteForm.email}
+                    placeholder='이메일을 입력해주세요'
                     onChange={handleChange}
                     required
                   />

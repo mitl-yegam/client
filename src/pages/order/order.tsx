@@ -17,7 +17,7 @@ const Order = () => {
     phone: '',
     email: '',
     requirement: orderRequirement,
-    files: null,
+    fileList: null,
   });
 
   // 파일 업로드
@@ -26,7 +26,7 @@ const Order = () => {
 
     if (files && files?.length > 0) {
       setForm((prevState) => {
-        let _files = prevState.files;
+        let _files = prevState.fileList;
 
         if (_files?.length) {
           const attachFiles = Array.from(_files);
@@ -45,7 +45,7 @@ const Order = () => {
 
         return {
           ...prevState,
-          files: Array.from(_files),
+          fileList: Array.from(_files),
         };
       });
     }
@@ -54,10 +54,10 @@ const Order = () => {
   // 파일 삭제
   const handleRemoveFile = useCallback(
     (removeIndex: number) => {
-      const { files } = form;
-      if (files) {
+      const { fileList } = form;
+      if (fileList) {
         const dataTranster = new DataTransfer();
-        Array.from(files)
+        Array.from(fileList)
           .filter((file, i) => i !== removeIndex)
           .forEach((file) => {
             dataTranster.items.add(file);
@@ -65,7 +65,7 @@ const Order = () => {
 
         setForm((prevState) => ({
           ...prevState,
-          files: Array.from(dataTranster.files),
+          fileList: Array.from(dataTranster.files),
         }));
       }
     },
@@ -97,18 +97,33 @@ const Order = () => {
       formData.append('email', form.email);
       formData.append('requirement', form.requirement);
 
-      if (form.files?.length) {
-        for (let i = 0; i < form.files.length; i++) {
-          formData.append(`file${i}`, form.files[i]);
+      if (form.fileList?.length) {
+        const fileList = [];
+        for (let i = 0; i < form.fileList.length; i++) {
+          fileList.push(form.fileList[i]);
         }
+
+        formData.append(`fileList`, JSON.stringify(fileList));
       }
 
-      const request = {
+      // {
+      //     companyName: 'mitl',
+      //     name: '마틴',
+      //     phone: '01011112222',
+      //     address: '강동구 둔촌동',
+      //     email: 'martininthelord@gmail.com',
+      //     requirement: '아래 파일에 대한 견적서 요청드려요.',
+      //     fileUrlList: 'asd',
+      //   },
+      const dispatch = {
         url: '/estimate',
         data: formData,
+        config: {
+          headers: { 'content-type': 'multipart/form-data' },
+        },
       };
 
-      await API.post(request);
+      await API.post(dispatch);
     },
     [form, termsAgree],
   );
@@ -220,8 +235,8 @@ const Order = () => {
                       multiple
                       onChange={handleChangeFiles}
                     />
-                    {form?.files &&
-                      Object.values(form?.files).map((file, index) => (
+                    {form?.fileList &&
+                      Object.values(form?.fileList).map((file, index) => (
                         <div className={styles['file-name-row']} key={index}>
                           <div className={styles['file-name']}>{file.name}</div>
                           <span
