@@ -20,17 +20,24 @@ const clientImg: { [key: string]: string } = {
 };
 
 const Company = () => {
-  const [sharingList, setSharingList] = useState<{[key: string]: any}[]>([]);
+  const [sharingList, setSharingList] = useState<{ [key: string]: any }[]>([]);
+  const [clientList, setClientList] = useState<{ [key: string]: any }[]>([]);
 
   useEffect(() => {
     const data = {
       pageName: 'introduction',
-      pageDetailName: 'sharing'
-    }
-    API.get({url: '/media', data})
-    .then(({data}) => {
+      pageDetailName: 'sharing',
+    };
+    const clientData = {
+      pageName: 'introduction',
+      pageDetailName: 'client',
+    };
+    API.get({ url: '/media', data }).then(({ data }) => {
       setSharingList(data);
-    })
+    });
+    API.get({ url: '/media', data: clientData }).then(({ data }) => {
+      setClientList(data);
+    });
   }, []);
 
   return (
@@ -105,7 +112,7 @@ const Company = () => {
         <div className='pt-10 pt-md-20 pb-10 pb-md-25'>
           <h2 className='blue-100 mb-5 mb-md-12 text-center'>주요고객사</h2>
           <div className='row justify-center mb-9'>
-            {companyData.client.map((item) => {
+            {clientList.map((item) => {
               return (
                 <div
                   key={shortid.generate()}
@@ -136,11 +143,7 @@ const Company = () => {
                   key={shortid.generate()}
                   className='col col-md-6 col-lg-4 d-center flex-column'>
                   <div className='pb-6'>
-                    <img
-                      src={item.url}
-                      width='100%'
-                      alt={item.title}
-                    />
+                    <img src={item.url} width='100%' alt={item.title} />
                     <p className='mt-5 bold3 white-pre-wrap'>{item.title}</p>
                     <p className='white-pre-wrap'>{item.subTitle}</p>
                   </div>

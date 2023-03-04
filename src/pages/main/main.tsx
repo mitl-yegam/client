@@ -35,7 +35,7 @@ const Main = () => {
     email: '',
     requirement: '',
   }); // 빠른견적 문의 Form
-  const [siteList, setSiteList] = useState<{[key:string]:any}[]>([]);
+  const [siteList, setSiteList] = useState<{ [key: string]: any }[]>([]);
 
   // 상담신청 완료 modal handler
   const handleModal = () => {
@@ -65,7 +65,7 @@ const Main = () => {
 
   // 상담신청
   const onSubmit = useCallback(
-    (e: FormEvent<HTMLFormElement>) => {
+    async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       if (!termsAgree) {
         return alert('개인정보 수집 동의함을 선택해 주세요.');
@@ -76,8 +76,22 @@ const Main = () => {
       formData.append('phone', fastQuoteForm.phone);
       formData.append('email', fastQuoteForm.email);
       formData.append('requirement', fastQuoteForm.requirement);
-      console.log('fastQuoteForm', fastQuoteForm);
-      handleModal();
+      const dispatch = {
+        url: '/estimate',
+        data: formData,
+      };
+
+      await API.post(dispatch).then(() => {
+        // 입력 폼 초기화
+        setFastQuoteForm({
+          name: '',
+          phone: '',
+          email: '',
+          requirement: '',
+        });
+        setTermsAgree(false);
+        handleModal();
+      });
     },
     [open, fastQuoteForm, termsAgree],
   );
@@ -95,12 +109,11 @@ const Main = () => {
   useEffect(() => {
     const data = {
       pageName: 'home',
-      pageDetailName: 'site'
-    }
-    API.get({url: '/media', data})
-    .then(({data}) => {
+      pageDetailName: 'site',
+    };
+    API.get({ url: '/media', data }).then(({ data }) => {
       setSiteList(data);
-    })
+    });
   }, []);
 
   return (
@@ -345,15 +358,13 @@ const Main = () => {
           </div>
           <div className='col'>
             <ul className={clsx(styles['case-wrapper'], 'row', 'gx-1')}>
-              {
-                siteList.map(item => {
-                  return (
-                    <li className='col-6 col-md-3' key={shortid.generate()}>
-                      <img src={item.url} alt={item.title} />
-                    </li>
-                  )
-                })
-              }
+              {siteList.map((item) => {
+                return (
+                  <li className='col-6 col-md-3' key={shortid.generate()}>
+                    <img src={item.url} alt={item.title} />
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

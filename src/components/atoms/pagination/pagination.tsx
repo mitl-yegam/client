@@ -3,16 +3,17 @@ import { ReactNode, useCallback, useEffect, useState } from 'react';
 import styles from './pagination.module.scss';
 import { Props } from './pagination.type';
 
-const Pagination = ({ row, totalCount, onFetchList }: Props) => {
-  const [currentPage, setCurrentPage] = useState(1);
+const Pagination = ({ row, totalCount, handler }: Props) => {
+  const [displayPage, setDisplayPage] = useState(1);
   const [list, setList] = useState<ReactNode[]>([]);
 
   const handlePaging = useCallback(
     async (page: number) => {
-      setCurrentPage(page);
-      onFetchList && (await onFetchList({ row, currentPage }));
+      window.scrollTo({ behavior: 'smooth', top: 0 });
+      setDisplayPage(page);
+      handler && handler(page);
     },
-    [currentPage],
+    [displayPage],
   );
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const Pagination = ({ row, totalCount, onFetchList }: Props) => {
             className={clsx(
               styles['number'],
               'd-center',
-              currentPage === i ? styles['active'] : '',
+              displayPage === i ? styles['active'] : '',
             )}
             key={i}
             onClick={() => handlePaging(i)}>
@@ -40,7 +41,11 @@ const Pagination = ({ row, totalCount, onFetchList }: Props) => {
 
     const elements = renderNumber();
     setList(elements);
-  }, [currentPage, totalCount, row]);
+  }, [displayPage, totalCount, row]);
+
+  if (totalCount === 0) {
+    return null;
+  }
 
   return (
     <section className={clsx(styles['root'], 'container', 'mb-10')}>
