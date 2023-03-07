@@ -9,12 +9,14 @@ const Button = ({
   onClick,
   style,
   textStyle,
+  disabled,
 }: Props) => {
   return (
     <button
       className={clsx(styles['root'], bgColor)}
       style={style}
-      onClick={onClick}>
+      onClick={onClick}
+      disabled={disabled}>
       {!!text && (
         <span className={clsx('heading6', color)} style={textStyle}>
           {text}

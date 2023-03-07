@@ -11,6 +11,7 @@ import API from 'api';
 
 const Order = () => {
   const [termsAgree, setTermsAgree] = useState(false); // 개인정보 수집 동의 여부
+  const [isLoading, setIsLoading] = useState(false); // api 요청 loading
   const [form, setForm] = useState<Form>({
     companyName: '',
     name: '',
@@ -98,26 +99,10 @@ const Order = () => {
       formData.append('requirement', form.requirement);
 
       if (form.fileList?.length) {
-        //   // const fileList = [];
         for (let i = 0; i < form.fileList.length; i++) {
-          // fileList.push(form.fileList[i]);
           formData.append(`fileList`, form.fileList[i]);
         }
-
-        //   // formData.append(`fileList`, form.fileList[0]);
-
-        //   console.log(formData.getAll('fileList'));
       }
-
-      // {
-      //     companyName: 'mitl',
-      //     name: '마틴',
-      //     phone: '01011112222',
-      //     address: '강동구 둔촌동',
-      //     email: 'martininthelord@gmail.com',
-      //     requirement: '아래 파일에 대한 견적서 요청드려요.',
-      //     fileUrlList: 'asd',
-      //   },
       const dispatch = {
         url: '/estimate',
         data: formData,
@@ -126,7 +111,24 @@ const Order = () => {
         },
       };
 
-      await API.post(dispatch);
+      setIsLoading(true);
+      await API.post(dispatch)
+        .then(() => {
+          alert('견적 문의가 접수되었습니다.');
+          window.scrollTo({ behavior: 'smooth', top: 0 });
+          setForm({
+            companyName: '',
+            name: '',
+            phone: '',
+            email: '',
+            requirement: orderRequirement,
+            fileList: null,
+          });
+          setTermsAgree(false);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
     },
     [form, termsAgree],
   );
@@ -316,7 +318,23 @@ const Order = () => {
             </tbody>
           </table>
           <div className='d-center mt-12 mb-25'>
-            <Button text={'견적 문의하기'} />
+            <Button
+              style={{
+                minWidth: 193,
+                minHeight: 66,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+              text={
+                isLoading ? (
+                  <div className={styles['spinner']} />
+                ) : (
+                  '견적 문의하기'
+                )
+              }
+              disabled={isLoading}
+            />
           </div>
         </form>
       </section>
