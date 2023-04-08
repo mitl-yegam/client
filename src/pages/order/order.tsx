@@ -19,6 +19,7 @@ const Order = () => {
     email: '',
     requirement: orderRequirement,
     fileList: null,
+    service: 'yegam',
   });
 
   // 파일 업로드
@@ -94,9 +95,10 @@ const Order = () => {
       const formData = new FormData();
       formData.append('companyName', form.companyName);
       formData.append('name', form.name);
-      formData.append('phone', form.phone);
+      formData.append('phone', form.phone.replace(/-/g, ''));
       formData.append('email', form.email);
       formData.append('requirement', form.requirement);
+      formData.append('service', 'yegam');
 
       if (form.fileList?.length) {
         for (let i = 0; i < form.fileList.length; i++) {
@@ -123,6 +125,7 @@ const Order = () => {
             email: '',
             requirement: orderRequirement,
             fileList: null,
+            service: 'yegam',
           });
           setTermsAgree(false);
         })

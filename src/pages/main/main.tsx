@@ -34,6 +34,7 @@ const Main = () => {
     phone: '',
     email: '',
     requirement: '',
+    service: 'yegam',
   }); // 빠른견적 문의 Form
   const [siteList, setSiteList] = useState<{ [key: string]: any }[]>([]);
 
@@ -73,9 +74,10 @@ const Main = () => {
 
       const formData = new FormData();
       formData.append('name', fastQuoteForm.name);
-      formData.append('phone', fastQuoteForm.phone);
+      formData.append('phone', fastQuoteForm.phone.replace(/-/g, ''));
       formData.append('email', fastQuoteForm.email);
       formData.append('requirement', fastQuoteForm.requirement);
+      formData.append('service', 'yegam');
       const dispatch = {
         url: '/estimate',
         data: formData,
@@ -88,6 +90,7 @@ const Main = () => {
           phone: '',
           email: '',
           requirement: '',
+          service: 'yegam',
         });
         setTermsAgree(false);
         handleModal();
@@ -110,6 +113,7 @@ const Main = () => {
     const data = {
       pageName: 'home',
       pageDetailName: 'site',
+      service: 'yegam',
     };
     API.get({ url: '/media', data }).then(({ data }) => {
       setSiteList(data);

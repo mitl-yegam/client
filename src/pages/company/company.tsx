@@ -27,10 +27,12 @@ const Company = () => {
     const data = {
       pageName: 'introduction',
       pageDetailName: 'sharing',
+      service: 'yegam',
     };
     const clientData = {
       pageName: 'introduction',
       pageDetailName: 'client',
+      service: 'yegam',
     };
     API.get({ url: '/media', data }).then(({ data }) => {
       setSharingList(data);
